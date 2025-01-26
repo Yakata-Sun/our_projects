@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700&family=Montserrat:wght@100..900&display=swap');
+* {
+  box-sizing: border-box; /* все элементы имеют ширину по бордер*/
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #07313F;
+  color: #F0F0F0;
+  font-size: 18px;
+  font-family: 'Montserrat',  sans-serif;
+}
+.image-glav {
+  /*background: url("../img/glav_head.png") top cover no-repeat fixed;*/
+    width: 100%;
+    height: auto;
+}
+/*header {
+  background: url('../img/glav_head.png') top center/cover no-repeat fixed;
+    width: 100%;
+    min-height: 600px;
+}*/
+header nav{
+  background-color: #07313F;
+}
+.menu-bar {
+  height: fit-content; /* Высота элемента адаптируется к содержимому (стандартное свойство) */
+   display: flex; /* Использует Flexbox для расположения дочерних элементов */
+   flex-wrap: wrap; /* Разрешаем перенос строк */
+   -webkit-backdrop-filter: blur(10px); /* Применяет размытие фона (для WebKit браузеров) */
+   backdrop-filter: blur(10px); /* Применяет размытие фона (стандартное свойство) */
+   align-items: center; /* Выравнивает элементы по вертикали по центру */
+   justify-content: space-around; /* Распределяет элементы с равными промежутками между ними */
+   padding: 0; /* Убирает внутренние отступы */
+   margin: 30px 0 0; /* Устанавливает верхний отступ в 50 пикселей, остальные отступы равны 0 */
+   width: 100%; /* Задает ширину контейнера в 100% от родительского элемента */
+}
+
+.menu-bar li {
+   list-style: none; /* Убирает маркеры списка */
+   border: 2px solid #FEE97D; /* Задает границу с цветом #FEE97D */
+/* Закругляет углы элементов списка на 20 пикселей */
+   color: #FEE97D; /* Задает цвет текста #FEE97D */
+   font-family: 'Montserrat Alternates', sans-serif; /* Устанавливает шрифт Montserrat */
+   font-weight: normal; /* Устанавливает нормальную толщину шрифта */
+   padding: 12px 16px; /* Устанавливает внутренние отступы сверху и снизу в 12 пикселей, слева и справа в 16 пикселей */
+   margin: 5px 10px; /* Устанавливает внешние отступы по 10 пикселей слева и справа */
+   position: relative; /* Устанавливает относительное позиционирование для дочерних элементов */
+   cursor: pointer; /* Меняет курсор на указатель при наведении */
+   white-space: nowrap; /* Запрещает перенос текста на новую строку */
+   flex-grow: 1; /* Позволяет элементам списка занимать равное пространство в контейнере */
+   text-align: center; /* Выравнивает текст по центру */
+}
+
+.menu-bar li::before {
+   content: " "; /* Создает пустой контент для псевдоэлемента */
+   position: absolute; /* Устанавливает абсолютное позиционирование относительно родителя */
+   top: 0; 
+   left: 0; 
+   height: 100%; /* Задает высоту равной высоте элемента списка */
+   width: 100%; /* Задает ширину равной ширине элемента списка */
+   z-index: -1; /* Помещает псевдоэлемент за элементами списка */
+   transition:  transform 0.2s; /* Задает плавный переход для всех изменяемых свойств за 0.2 секунды */
+ /* Закругляет углы псевдоэлемента на 25 пикселей */
+}
+
+.menu-bar li:hover {
+   color: #BD6A34; /* Изменяет цвет текста на черный при наведении */
+   font-weight: 600;
+}
+
+.menu-bar li:hover::before {
+   background: linear-gradient(to bottom, #FEE97D, #B1D090); /* Задает градиентный фон для псевдоэлемента при наведении */
+   box-shadow: 0px 3px 20px 0px #191919; /* Добавляет тень к псевдоэлементу при наведении */
+}
+
+repeat(auto-fit, minmax(140px, 1fr));  -в гриде повторение автоматическое колонок с минмакс размеров
+Чтобы растянуть грид-элемент, используют слово span, а после указывают число колонок, которые элемент должен занять:
