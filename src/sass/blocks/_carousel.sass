@@ -1,0 +1,41 @@
+.carousel_inner
+  position: relative
+  & img
+    display: block
+    max-width: 500px
+    margin: 0 auto
+    border-radius: 20px/15px
+  & .slick-prev, & .slick-next
+    border: none
+    box-shadow: none
+    width: 67px
+    height: 67px
+    background: none
+    &:hover, &:active
+      background: none
+    & img
+      width: 100%
+      height: 100%
+  & .slick-prev
+    position: absolute
+    top: 25%
+    left: -10px
+  & .slick-next
+    position: absolute
+    top: 25%
+    right: -10px
+.carousel_description
+  padding: 40px
+.carousel_description_number
+  padding: 40px
+  display: flex
+  justify-content: center
+  &_item
+    display: flex
+    flex-direction: column
+    width: 200px
+    justify-content: space-between
+    text-align: center 
+      
+
+
