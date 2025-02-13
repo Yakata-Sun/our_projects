@@ -1,0 +1,72 @@
+.menu-bar
+  height: fit-content
+  display: flex
+  flex-wrap: wrap
+  backdrop-filter: blur(10px)
+  align-items: center
+  justify-content: space-around
+  padding: 0
+  margin: 0 auto
+  width: 100%
+  &_list
+    list-style: none
+    padding: 12px 16px
+    margin: 5px 10px
+    position: relative
+    white-space: nowrap
+    flex-grow: 1
+    text-align: center
+    border: 1px solid #fee97d
+    cursor: pointer
+    box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+    &:hover
+      box-shadow: none
+  &_link
+    display: block
+    width: 100%
+    height: 100%
+    font: bold 120% "Montserrat Alternates", sans-serif
+    color: #fee97d
+    &_active
+      font: bold 120% "Montserrat Alternates", sans-serif
+      color: #fee97d
+      text-decoration: none
+.glav_img_button, button
+  border: 1px solid #fee97d
+  color: #fee97d
+  font: bold 120% "Montserrat Alternates", sans-serif
+  cursor: pointer
+  box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+  &:hover, &:active
+    -webkit-box-shadow: 0px 3px 20px 0px #191919
+    box-shadow: 0px 3px 20px 0px #191919
+    text-decoration: underline
+    transition-duration: 0.3s
+button
+  background-color: #07313f
+  width: 200px
+  height: 50px
+  margin: 15px 0
+
+.shop_button, .project_button
+  display: flex
+  align-items: center
+  min-height: 250px
+  margin: 40 auto
+  border-radius: 20px/15px
+
+.shop_button
+  background: url("../img/mas_glav.png") center (center / cover) no-repeat
+
+.project_button
+  background: url("../img/master_glav.png") center (center / cover) no-repeat
+
+.glav_img_button
+  font-size: 1em
+  width: 150px
+  height: 150px
+  background-color: rgba(7, 49, 63, 0.7)
+  padding: 3% 3%
+  margin: auto auto
+  -ms-flex-item-align: center
+  align-self: center

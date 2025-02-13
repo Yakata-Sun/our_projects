@@ -40,13 +40,15 @@ a
   color: #f0f0f0
   font: normal 18px/24px "Montserrat Alternates", sans-serif
   text-decoration: underline
+@import "blocks/menu-buttons"
 @import "blocks/forms"
 @import "blocks/project"
 @import "blocks/carousel"
+@import "blocks/modal"
 .head
   background: url(../img/glav_head.png) center (center / cover) no-repeat
   margin: auto
-  height: 40vh
+  min-height: 300pt
   max-width: 1440px
   border-radius: 20px/15px
 .head_other
@@ -62,67 +64,8 @@ a
   display: flex
   justify-content: end
   column-gap: 20px
-.menu-bar li a
-  display: block
-  width: 100%
-  height: 100%
-  text-decoration: none
-  font: bold 120% "Montserrat Alternates", sans-serif
-  color: #fee97d
-  &:hover, &:active
-    color: #bd6a34
-    transition-duration: 0.3s
-.glav_img_button, .menu-bar li, button
-  border: 1px solid #fee97d
-  color: #fee97d
-  font: bold 120% "Montserrat Alternates", sans-serif
-  cursor: pointer
-  box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
-  &:hover, &:active
-    color: #bd6a34
-    background: -webkit-gradient(linear, left top, left bottom, from(#FEE97D), to(#B1D090))
-    background: linear-gradient(to bottom, #FEE97D, #B1D090)
-    -webkit-box-shadow: 0px 3px 20px 0px #191919
-    box-shadow: 0px 3px 20px 0px #191919
-    text-decoration: underline
-    transition-duration: 0.3s
-button
-  background-color: #07313f
-  width: 200px
-  height: 50px
-  margin: 15px 0
-.menu-bar
-  height: -webkit-fit-content
-  height: -moz-fit-content
-  height: fit-content
-  display: -webkit-box
-  display: -ms-flexbox
-  display: flex
-  -ms-flex-wrap: wrap
-  flex-wrap: wrap
-  -webkit-backdrop-filter: blur(10px)
-  backdrop-filter: blur(10px)
-  -webkit-box-align: center
-  -ms-flex-align: center
-  align-items: center
-  -ms-flex-pack: distribute
-  justify-content: space-around
-  padding: 0
-  margin: 30px 0 0
-  width: 100%
-  li
-    list-style: none
-    padding: 12px 16px
-    margin: 5px 10px
-    position: relative
-    white-space: nowrap
-    -webkit-box-flex: 1
-    -ms-flex-positive: 1
-    flex-grow: 1
-    text-align: center
-a .selected
-  background-color: #07313f
-  border: 2px solid #FEE97D
+  & img
+    width: 40px
 .promo
   margin: 20px 0
   h1
@@ -133,29 +76,6 @@ a .selected
 
 .col
   margin: 0 20px
-
-.shop_button, .project_button
-  display: flex
-  align-items: center
-  min-height: 250px
-  margin: 40 auto
-  border-radius: 20px/15px
-
-.shop_button
-  background: url("../img/mas_glav.png") center (center / cover) no-repeat
-
-.project_button
-  background: url("../img/master_glav.png") center (center / cover) no-repeat
-
-.glav_img_button
-  font-size: 1em
-  width: 150px
-  height: 150px
-  background-color: rgba(7, 49, 63, 0.7)
-  padding: 3% 3%
-  margin: auto auto
-  -ms-flex-item-align: center
-  align-self: center
 img.stiker
   width: 100%
 .stikers
