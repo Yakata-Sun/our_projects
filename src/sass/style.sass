@@ -4,7 +4,7 @@
   margin: 0
   padding: 0
 body
-  background-color: #07313f
+  background-color: rgb(7, 49, 63)
   color: #f0f0f0
   font: 18px/24px "Montserrat", sans-serif
   letter-spacing: 0.7px
@@ -39,12 +39,17 @@ p
 a
   color: #f0f0f0
   font: normal 18px/24px "Montserrat Alternates", sans-serif
-  text-decoration: underline
+  text-decoration: none
+.container
+  max-width: 1440px
 @import "blocks/menu-buttons"
 @import "blocks/forms"
 @import "blocks/project"
 @import "blocks/carousel"
 @import "blocks/modal"
+@import "blocks/main_aside"
+@import "blocks/catalog"
+@import "blocks/footer"
 .head
   background: url(../img/glav_head.png) center (center / cover) no-repeat
   margin: auto
@@ -60,9 +65,14 @@ a
   border-radius: 20px/15px
   width: 100%
 .soc
+  background-color: rgba(7, 49, 63, .5)
+  margin: 5px
+  padding: 5px 10px
+  border-radius: 10px/7.5px
   justify-self: end
   display: flex
   justify-content: end
+  align-items: center
   column-gap: 20px
   & img
     width: 40px
@@ -132,8 +142,3 @@ img.stiker
   background: url("../img/tovary/mylo.png") center center/cover no-repeat
   &:hover
     background: url("../img/tovary/shampun.png") center center/cover no-repeat
-.main_aside
-  list-style-type: none
-.list_project
-  padding: 10%
-  border-radius: 20px/15px

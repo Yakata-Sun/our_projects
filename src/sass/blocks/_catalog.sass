@@ -1,0 +1,86 @@
+.catalog
+  margin-top: 10px
+  &_tabs
+    margin-bottom: 40px
+    list-style: none
+    display: flex
+    justify-content: center
+    align-items: center
+  &_tab
+    width: 160px
+    height: 48px
+    border-radius: 5px
+    border: 1px solid #fee97d
+    text-align: center
+    line-height: 48px
+    transform: skewX(-25deg)
+    margin: 0 5px
+    text-decoration: underline
+    transition: 0.5s all
+    div
+      transform: skewX(25deg)
+    &_active
+      box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+      text-decoration: none
+    &:hover
+      box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+      cursor: pointer
+.catalog_content
+  display: none
+  flex-wrap: wrap
+  justify-content: space-between
+  &_active
+    display: flex
+.catalog_item
+  min-height: 450px
+  width: 400px
+  margin: 0.5%
+  padding: 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  border-radius: 20px/15px
+  box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+  img
+    display: block
+    margin: 0 auto
+    max-width: 100%
+    height: 200px
+  h3
+    margin-top: 5px
+.lamps, .jewerly, .keramic, .honey, .lamps_wild, .gidrolats, .cosmetics, .dream, .massage, .dreamwoman, .master_class
+  width: 80%
+  height: 250px
+  margin-bottom: 20px
+  align-self: center
+  &:hover
+    transition-duration: 1s
+.lamps
+  background: url("../img/tovary/panda.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/lustra.png") center center/cover no-repeat
+.jewerly
+  background: url("../img/tovary/braslety.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/ukrashen.png") center center/cover no-repeat
+.keramic
+  background: url("../img/tovary/keramika_tea.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/chashki.png") center center/cover no-repeat
+.honey
+  background: url("../img/tovary/med_dik.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/med_v_tarelke.png") center center/cover no-repeat
+.lamps_wild
+  background: url("../img/tovary/stounheng_chast.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/nochnik.png") center center/cover no-repeat
+.gidrolats
+  background: url("../img/tovary/gidrolat.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/gidrolaty.png") center center/cover no-repeat
+.cosmetics
+  background: url("../img/tovary/mylo.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/shampun.png") center center/cover no-repeat
