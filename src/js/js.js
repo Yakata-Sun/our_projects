@@ -33,4 +33,19 @@ $(document).ready(function(){
   $('.modal_close').on('click', function(){
     $('.overlay, #consultation, #thanks').fadeOut('slow');
   });
+  $('form').submit(function(e){
+      e.preventDefault();
+        // if (!$(this).valid(){return;}) чтобы только после прохождения валидации
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function(){
+        $(this).find("input").val("");
+        $('#consultation').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+        $('form').trigger('reset');
+      });
+      return false;
+  });
 });

@@ -258,11 +258,11 @@
         <div class="row">
           <div class="col">
             <h2>Есть вопросы?<br>Оставьте сообщение, мы вам перезвоним</h2>
-            <form action="#" method="#" class="feed-form">
-              <input required type="text" placeholder="Ваше имя">
-              <input required type="text" placeholder="Номер телефона или email" name="" id="">
-              <input type="textarea" name="" id="" cols="60" rows=10 placeholder="Ваше сообщение (необязательно)">
-              <button data-modal="thanks">Отправить</button>
+            <form action="#" class="feed-form">
+              <input name="name" type="text" placeholder="Ваше имя">
+              <input required name="contact" type="text" placeholder="Номер телефона или email" id="">
+              <input type="textarea" name="descr" id="" cols="60" rows=10 placeholder="Ваше сообщение (необязательно)">
+              <button>Отправить</button>
             </form>
           </div>
         </div>
@@ -313,16 +313,16 @@
       <div class="modal_close">&times;</div>
       <div class="modal_subtitle"><h3>Перезвонить?</h3></div>
       <div class="modal_descr"><h4>Оставьте ваш номер телефона</h4></div>
-      <form action="#" method="#" class="feed-form">
-        <input required type="text" placeholder="Ваше имя">
-        <input required type="text" placeholder="Номер телефона" name="" id="">
-        <input type="textarea" name="" id="" cols="60" rows=10 placeholder="Ваше сообщение (необязательно)">
+      <form action="#" class="feed-form">
+        <input name="name" type="text" placeholder="Ваше имя">
+        <input required name="contact" type="text" placeholder="Номер телефона или email" id="">
+        <input type="textarea" name="descr" id="" cols="60" rows=10 placeholder="Ваше сообщение (необязательно)">
         <button>Отправить</button>
       </form>
     </div>
     <div class="modal modal_mini" data-modal="thanks" id="thanks">
       <div class="modal_close">&times;</div>
-      <div class="modal_subtitle"><h3>Блага вам и добра!</h3></div>
+      <div class="modal_subtitle"><h3>Доброго пути!</h3></div>
       <div class="modal_descr"><h4>В ближайшее время выйдем на связь!</h4></div>
     </div>
   </div>
