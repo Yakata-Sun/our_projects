@@ -48,4 +48,20 @@ $(document).ready(function(){
       });
       return false;
   });
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 1400) {
+      $('.pageUp').fadeIn('slow');
+    } else {
+      $('.pageUp').fadeOut();
+    }
+  });  
+  $('a[href^="#"').on('click', function() {
+
+    const href = $(this).attr('href');
+
+  $('html, body').animate({
+      scrollTop: $(href).offset().top
+  });
+  return false;
+});
 });

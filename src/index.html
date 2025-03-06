@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  <header>
+  <header id="up">
     <div class="head">
       <div class="soc">
         <button data-modal="consultation" class="button">pdjyjr</button>
@@ -26,10 +27,10 @@
       <div class="row">
         <nav>
           <ul class="menu-bar">
-            <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link menu-bar_link_active">Главная</a></li>
+            <li class="menu-bar_list menu-bar_list_active"><a href="#"
+                class="menu-bar_link menu-bar_link_active">Главная</a></li>
             <li class="menu-bar_list"><a href="projects.html" class="menu-bar_link">Проекты</a></li>
-            <li class="menu-bar_list"><a href="" class="menu-bar_link">Жилье</a></li>
-            <li class="menu-bar_list"><a href="http://" class="menu-bar_link">Походы</a></li>
+            <li class="menu-bar_list"><a href="#products" class="menu-bar_link">Товары</a></li>
             <li class="menu-bar_list"><a href="blog.html" class="menu-bar_link">Статьи</a></li>
             <li class="menu-bar_list"><a href="" class="menu-bar_link">Друзья</a></li>
           </ul>
@@ -47,47 +48,45 @@
             И мы стараемся следовать своей мечте.</p>
         </div>
       </div>
-      <div class="row justify-item-center  row-cols-12">
-        <h3></h3>
-        <div class="col-lg-1 col-3 stikers">
+      <div class="row">
+        <div class="col shop_button">
+          <a href="#products" class="glav_img_button">Товары</a>
+        </div>
+        <div class="col project_button">
+          <a href="projects.html" class="glav_img_button">Мастера и Мастерские</a>
+        </div>
+      </div>
+      <div class="stiker_row">
+        <div class="stikers">
           <img src="img/stiker/project.png" alt="" class="stiker">
           <p class="stikers_sum">11</p>
           <p class="stikers_mean">Проектов</p>
         </div>
-        <div class="col-lg-1 col-3 stikers">
+        <div class="stikers">
           <img src="img/stiker/masters.png" alt="" class="stiker">
           <p class="stikers_sum">15</p>
           <p class="stikers_mean">Мастеров
           </p>
         </div>
-        <div class="col-lg-1 col-3 stikers">
+        <div class="stikers">
           <img src="img/stiker/project.png" alt="" class="stiker">
           <p class="stikers_sum">40</p>
           <p class="stikers_mean">Товаров
           </p>
         </div>
-        <div class="col-lg-1 col-3 stikers">
+        <div class="stikers">
           <img src="img/stiker/masters_om.png" alt="" class="stiker">
           <p class="stikers_sum">14</p>
           <p class="stikers_mean">Услуг
           </p>
         </div>
-        <div class="col-lg-1 col-3 stikers">
+        <div class="stikers">
           <img src="img/stiker/marshruty.png" alt="" class="stiker">
           <p class="stikers_sum">50</p>
           <p class="stikers_mean">Троп
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col shop_button">
-          <button class="glav_img_button">Товары</button>
-        </div>
-        <div class="col project_button">
-          <button class="glav_img_button">Мастера и Мастерские</button>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col-md-10 offset-md-1">
           <h2 class="promo_shop">
@@ -101,129 +100,120 @@
         </div>
       </div>
       <div class="row shop">
-      <section class="catalog">
-        <ul class="catalog_tabs">
-          <li class="catalog_tab catalog_tab_active"><div>Товары</div></li>
-          <li class="catalog_tab"><div>Услуги</div></li>
-          <li class="catalog_tab"><div>Жилье</div></li>
-        </ul>
-        <div class="catalog_content catalog_content_active">
-          <div class="catalog_item">
-            <div class="catalog_item_content">
-              <div class="lamps"></div>
-              <h3>Декоративные светильники из фанеры высшего сорта.</h3>
-              <p>От семейной мастерской авторских светильников и декора "Крот Новосвободный".</p>
-              <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
+        <section class="catalog" id="products">
+          <ul class="catalog_tabs">
+            <li class="catalog_tab catalog_tab_active">
+              <div>Товары</div>
+            </li>
+            <li class="catalog_tab">
+              <div>Услуги</div>
+            </li>
+            <li class="catalog_tab">
+              <div>Жилье</div>
+            </li>
+          </ul>
+          <div class="catalog_content catalog_content_active">
+            <div class="catalog_item">
+              <div class="catalog_item_content">
+                <div class="lamps"></div>
+                <h3>Декоративные светильники из фанеры высшего сорта.</h3>
+                <p>От семейной мастерской авторских светильников и декора "Крот Новосвободный".</p>
+                <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
+              </div>
+              <p>Идеальный подарок для родных и близких.</p>
+              <a href="" class="button">Посмотреть</a>
             </div>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
+            <div class="catalog_item">
+              <div class="jewerly"></div>
+              <h3>Авторские украшения из экологически чистых материалов.</h3>
+              <p>Созданные с любовью в семейной мастерской "Домик в Лесу"</p>
+              <p>Браслеты, колье, ожерелья, серьги, кулоны - все, что подчеркивает вашу красоту и стиль. </p>
+              <a href="house-in-forest.html" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="keramic"></div>
+              <h3>Авторская керамическая посуда.</h3>
+              <p>От керамической мастерской "Тепло".</p>
+              <p>Уникальные дизайны, вдохновленные природой и культурными традициями.</p>
+              <a href="keramika-teplo.html" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="lamps_wild"></div>
+              <h3>Уютные ночники из цельного дерева.</h3>
+              <p>Естественная красота и стиль. </p>
+              <p>Благодаря натуральным материалам, каждый ночник имеет свой уникальный
+                рисунок и характер и существует только в одном экземпляре.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="gidrolats"></div>
+              <h3>Натуральные гидролаты</h3>
+              <p>Открой для себя целительные ароматы дикой природы.</p>
+              <p>Изготавливаются из органически выращенных растений или собраны в лесах горной Адыгее.</p>
+              <p>То, что преобразит вашу кожу и общее здоровье</p>
+              <a href="gidrolat-moon-ally.html" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="cosmetics"></div>
+              <h3>Натуральная косметика</h3>
+              <p>Натуральное мыло, шампуни, эфирные масла от личного подсобного хозяйства и питомника "Домик в лему"</p>
+              <p>Эффективные решения по уходу за своим телом без агрессивной химии.</p>
+              <a href="house-in-forest.html" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="honey"></div>
+              <h3>Семейная мастерская авторских светильников и декора.</h3>
+              <p>Декоративные светильники из фанеры высшего сорта.</p>
+              <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
+              <p>Идеальный подарок для родных и близких.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
           </div>
-          <div class="catalog_item">
-            <div class="jewerly"></div>
-            <h3>Авторские украшения из экологически чистых материалов.</h3>
-            <p>Созданные с любовью в семейной мастерской "Домик в Лесу"</p>
-            <p>Браслеты, колье, ожерелья, серьги, кулоны - все, что подчеркивает вашу красоту и стиль. </p>
-            <p>Каждое украшение создается вручную, что делает его единственным в своем роде.</p>
-            <button>Посмотреть</button>
+          <div class="catalog_content">
+            <div class="catalog_item">
+              <img src="img/tovary/skazka.png" all="" class="dream"></ш>
+              <h3>Личные терапевтические сказки для взрослых.</h3>
+              <p>Закройте двери прошлым неурядицам и обидам, откройте новое будущее с помощью личной терапевтической
+                сказки!</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <img src="img/tovary/dreamwoman.png" all="" class="dreamwoman">
+              <h3>Трансформационные игры</h3>
+              <p>Игры, которые помогают по новому взглянуть на мир вокруг себя.</p>
+              <p>Бесценный опыт решения насущных проблем через игру.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <img src="img/tovary/master_klass.png" all="" class="master_class">
+              <h3>Мастер-классы</h3>
+              <p>Индивидуальные и групповые мастер-классы по керамике, линогравюре, сакральной геометрии, игре на
+                барабанах и другие.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <img src="img/tovary/massage.png" all="" class="massage">
+              <h3>Массаж</h3>
+              <p>Первоклассные мастера массажа различных направлений.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="lamps_wild"></div>
+              <h3>Обучение</h3>
+              <p>Нужна помощь в изучении предмета?
+              <p>Обращайтесь.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
+            <div class="catalog_item">
+              <div class="gidrolats"></div>
+              <h3>Консультации</h3>
+              <p>В нашей станице живут люди, готовые вас проконсультировать по психологии, коучингу, родологии и другим
+                темам.</p>
+              <a href="" class="button">Посмотреть</a>
+            </div>
           </div>
-          <div class="catalog_item">
-            <div class="keramic"></div>
-            <h3>Авторская керамическая посуда.</h3>
-            <p>От керамической мастерской "Тепло".</p>
-            <p>Уникальные дизайны, вдохновленные природой и культурными традициями, добавят изысканности и стиля в ваш
-              интерьер.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="lamps_wild"></div>
-            <h3>Уютные ночники из цельного дерева.</h3>
-            <p>Естественная красота и стиль. Благодаря натуральным материалам, каждый ночник имеет свой уникальный
-              рисунок и характер и существует только в одном экземпляре.</p>
-            <p>Не только освещают пространство, но и становятся стильным акцентом в вашем интерьере.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="gidrolats"></div>
-            <h3>Натуральные гидролаты</h3>
-            <p>Открой для себя целительные ароматы дикой природы.</p>
-            <p>Изготавливаются из органически выращенных растений или собраны в лесах горной Адыгее.</p>
-            <p>То, что преобразит вашу кожу и общее здоровье</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="cosmetics"></div>
-            <h3>Натуральная косметика</h3>
-            <p>Натуральное мыло, шампуни, эфирные масла от личного подсобного хозяйства и питомника "Домик в лему"</p>
-            <p>Эффективные решения по уходу за своим телом без агрессивной химии.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="honey"></div>
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Декоративные светильники из фанеры высшего сорта.</p>
-            <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-        </div>
-        <div class="catalog_content">
-          <div class="catalog_item">
-            <img src="img/tovary/skazka.png" all="" class="dream"></ш>
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Декоративные светильники из фанеры высшего сорта.</p>
-            <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <img src="img/tovary/dreamwoman.png" all="" class="dreamwoman">
-            <h3>ЛПХ "Домик в лесу"</h3>
-            <p>Авторские украшения из экологически чистых материалов.</p>
-            <p>Браслеты, колье, ожерелья, серьги, кулоны - все, что подчеркивает вашу красоту и стиль.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <img src="img/tovary/master_klass.png" all="" class="master_class">
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Декоративные светильники из фанеры высшего сорта.</p>
-            <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <img src="img/tovary/massage.png" all="" class="massage">
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Декоративные светильники из фанеры высшего сорта.</p>
-            <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="lamps_wild"></div>
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Уютные ночники из цельного дерева.</p>
-            <p>Декоративные ночники</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="gidrolats"></div>
-            <h3>Семейная мастерская авторских светильников и декора.</h3>
-            <p>Декоративные светильники из фанеры высшего сорта.</p>
-            <p>С гравировкой и без, с уникальными рисунками, разных форм.</p>
-            <p>Идеальный подарок для родных и близких.</p>
-            <button>Посмотреть</button>
-          </div>
-          <div class="catalog_item">
-            <div class="cosmetics"></div>
-            <h3>Натуральная косметика</h3>
-            <p>Натуральное мыло, шампуни, эфирные масла от личного подсобного хозяйства и питомника "Домик в лему"</p>
-            <p>Эффективные решения по уходу за своим телом без агрессивной химии.</p>
-            <button>Посмотреть</button>
-          </div>
-        </div>
       </div>
-    </section>
+      </section>
       <section class="row carousel">
         <h2>Туристические маршруты</h2>
         <div class="col-md-6 col-sm-12">
@@ -245,11 +235,11 @@
           <p>Отсюда можно отправиться по известным и редко посещаемым туристическим маршрутам.</p>
           <div class="carousel_description_number">
             <div class="carousel_description_number_item">
-              <p>7</p>
+              <p class="stikers_sum">7</p>
               <p>Пеших</p>
             </div>
             <div class="carousel_description_number_item">
-              <p>50</p>
+              <p class="stikers_sum">50</p>
               <p>на машине</p>
             </div>
           </div>
@@ -273,25 +263,17 @@
   <footer>
     <div class="container footer-flex">
       <div>
-        <ul class="menu-bar menu-bar_footer">
-          <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link menu-bar_link_active">Главная</a></li>
-          <li class="menu-bar_list"><a href="projects.html" class="menu-bar_link">Проекты</a></li>
-          <li class="menu-bar_list"><a href="" class="menu-bar_link">Жилье</a></li>
-          <li class="menu-bar_list"><a href="http://" class="menu-bar_link">Походы</a></li>
-          <li class="menu-bar_list"><a href="blog.html" class="menu-bar_link">Статьи</a></li>
-          <li class="menu-bar_list"><a href="" class="menu-bar_link">Друзья</a></li>
-        </ul>
-      </div>
-      <div>
         <ul class="list_project">
           <li class="main_aside"><a href="" class="main_aside_link">Домокомплекты "Солмадом"</a></li>
           <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">ЛПХ "Домик в Лесу"</a></li>
           <li class="main_aside"><a href="" class="main_aside_link">Мастерская "Лампы из леса"</a></li>
-          <li class="main_aside"><a href="krot.html" class="main_aside_link">Проект "Крот Новосвободный"</a></li>
-          <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a></li>
+          <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
+          <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a>
+          </li>
           <li class="main_aside"><a href="" class="main_aside_link">Сказкотерапия Марии Яката</a></li>
-          <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская "Тепло"</a></li>
-          </ul>
+          <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская
+              "Тепло"</a></li>
+        </ul>
       </div>
       <div>
         <ul class="list_project">
@@ -303,7 +285,7 @@
       <div>
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp;source=constructor"
-          width="565" height="421" frameborder="0">
+          width="565" height="421" frameborder="0" style="border-radius: 15px">
         </iframe>
       </div>
     </div>
@@ -311,8 +293,12 @@
   <div class="overlay">
     <div class="modal" id="consultation">
       <div class="modal_close">&times;</div>
-      <div class="modal_subtitle"><h3>Перезвонить?</h3></div>
-      <div class="modal_descr"><h4>Оставьте ваш номер телефона</h4></div>
+      <div class="modal_subtitle">
+        <h3>Перезвонить?</h3>
+      </div>
+      <div class="modal_descr">
+        <h4>Оставьте ваш номер телефона</h4>
+      </div>
       <form action="#" class="feed-form">
         <input name="name" type="text" placeholder="Ваше имя">
         <input required name="contact" type="text" placeholder="Номер телефона или email" id="">
@@ -322,10 +308,17 @@
     </div>
     <div class="modal modal_mini" data-modal="thanks" id="thanks">
       <div class="modal_close">&times;</div>
-      <div class="modal_subtitle"><h3>Доброго пути!</h3></div>
-      <div class="modal_descr"><h4>В ближайшее время выйдем на связь!</h4></div>
+      <div class="modal_subtitle">
+        <h3>Доброго пути!</h3>
+      </div>
+      <div class="modal_descr">
+        <h4>В ближайшее время выйдем на связь!</h4>
+      </div>
     </div>
   </div>
+  <a href="#up" class="pageUp">
+    <img src="icons/arrowUp.svg" alt="up">
+  </a>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>

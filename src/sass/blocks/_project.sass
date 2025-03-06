@@ -2,6 +2,10 @@
   display: flex
   flex-direction: column
   gap: 40px
+  margin-left: 40px
+  width: 60%
+  &._promo
+    margin-top: 20px
   &_item
     border: 2px solid #FEE97D
     padding: 15px
@@ -15,3 +19,15 @@
         border-radius: 20px/15px
         width: 300px
         align-self: flex-start
+  &_desc
+    padding: 20px
+    img
+      float: left
+      margin: 20px
+    ul
+      li
+        list-style: none
+        &::before
+          content: "•"
+          margin-right: 10px
+          color: #FEE97D

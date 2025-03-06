@@ -15,11 +15,12 @@ h1, h2, h3
   font-style: bold
 h1
   font-size: 37px
-  line-height: 45px
+  line-height: 50px
   letter-spacing: 1.5px
 h2
   font-size: 30px
   line-height: 38px
+  letter-spacing: 1.2px
 h3
   font-size: 25px
   line-height: 32px
@@ -34,6 +35,7 @@ p
   -moz-hyphens: auto
   -ms-hyphens: auto
   hyphens: auto
+  letter-spacing: 0.1em
   &::first-letter
     font-size: 110%
 a, button
@@ -50,6 +52,9 @@ a, button
 @import "blocks/main_aside"
 @import "blocks/catalog"
 @import "blocks/footer"
+@import "blocks/pageup"
+main
+  display: flex
 .head
   background: url(../img/glav_head.png) center (center / cover) no-repeat
   margin: auto
@@ -83,12 +88,15 @@ a, button
 
 .row
   margin: 40px
-
 .col
   margin: 0 20px
+.stiker_row
+  display: flex
+  justify-self: center
 img.stiker
-  width: 100%
+  width: 45px
 .stikers
+  width: 120px
   margin: 20px
   text-align: center
   &_sum
