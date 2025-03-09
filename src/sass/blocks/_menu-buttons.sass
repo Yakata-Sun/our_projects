@@ -16,7 +16,6 @@
       border: none
   &_list
     list-style: none
-    margin: 5px 10px
     position: relative
     white-space: nowrap
     flex-grow: 1
@@ -60,8 +59,9 @@
 .shop_button, .project_button
   display: flex
   align-items: center
-  min-height: 250px
-  margin: 40 auto
+  min-width: 300px
+  min-height: 200px
+  margin: 20 auto
   border-radius: 20px/15px
 
 .shop_button
@@ -77,3 +77,10 @@
   margin: auto auto
   -ms-flex-item-align: center
   align-self: center
+@media (max-width: 700px) 
+  .menu-bar
+    justify-content: center
+    &_list
+      width: 200px
+      margin: 0
+      flex-grow: 0

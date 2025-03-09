@@ -6,11 +6,11 @@ $(document).ready(function(){
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplaySpeed: 2000,
-    prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrowLeft.ico"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="icons/arrowRight.ico"></button>',
+    prevArrow: '<svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"  class="slick-prev"><path d="M35 30H7M21 50L7 30l14-20" /> </svg> ' ,
+    nextArrow: '<svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"  class="slick-next"><path d="M7 30h28M21 10l14 20-14 20" /></svg>  ',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 700,
         settings: {
         dots: true,
         arrows: false
@@ -64,4 +64,5 @@ $(document).ready(function(){
   });
   return false;
 });
+
 });

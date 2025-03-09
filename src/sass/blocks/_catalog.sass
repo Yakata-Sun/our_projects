@@ -28,7 +28,7 @@
 .catalog_content
   display: none
   flex-wrap: wrap
-  justify-content: space-between
+  justify-content: space-around
   &_active
     display: flex
 .catalog_item
@@ -49,6 +49,8 @@
     height: 200px
   h3
     margin-top: 5px
+  p
+    text-align: left
 .lamps, .jewerly, .keramic, .honey, .lamps_wild, .gidrolats, .cosmetics, .dream, .massage, .dreamwoman, .master_class
   width: 80%
   height: 250px
@@ -84,3 +86,13 @@
   background: url("../img/tovary/mylo.png") center center/cover no-repeat
   &:hover
     background: url("../img/tovary/shampun.png") center center/cover no-repeat
+@media (max-width: 600px)
+  .catalog_content
+    flex-direction: column
+    row-gap: 20px
+    align-items: center
+  .catalog_item
+    width: 100%
+    margin: 0 auto
+    padding: 10px 5px
+

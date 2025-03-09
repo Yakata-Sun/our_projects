@@ -44,17 +44,27 @@ a, button
   text-decoration: none
 .container
   max-width: 1440px
+nav
+  margin: 20px
+main
+  display: flex
+.row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
 @import "blocks/menu-buttons"
+@import "blocks/catalog"
 @import "blocks/forms"
 @import "blocks/project"
 @import "blocks/carousel"
 @import "blocks/modal"
 @import "blocks/main_aside"
-@import "blocks/catalog"
 @import "blocks/footer"
 @import "blocks/pageup"
-main
-  display: flex
+
+
 .head
   background: url(../img/glav_head.png) center (center / cover) no-repeat
   margin: auto
@@ -85,68 +95,44 @@ main
   margin: 20px 0
   h1
     margin: 20px
-
 .row
+  display: flex
+  gap: 20px
+  justify-content: space-around
   margin: 40px
-.col
-  margin: 0 20px
 .stiker_row
+  max-width: 700px
   display: flex
   justify-self: center
+  justify-content: space-around
+  flex-wrap: wrap
 img.stiker
   width: 45px
 .stikers
   width: 120px
-  margin: 20px
+  margin: 10px
   text-align: center
   &_sum
     font-size: 24px
     color: #fee97d
     font-weight: bold
-.shop
-  row-gap: 25px
-.shop_primary
-  height: 100%
-  margin: 0.5%
-  padding: 20px
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
-  border-radius: 20px/15px
-  box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
-.lamps, .jewerly, .keramic, .honey, .lamps_wild, .gidrolats, .cosmetics, .dream, .massage, .dreamwoman, .master_class
-  width: 80%
-  height: 250px
-  margin-bottom: 20px
-  align-self: center
-  &:hover
-    transition-duration: 1s
-.lamps
-  background: url("../img/tovary/panda.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/lustra.png") center center/cover no-repeat
-.jewerly
-  background: url("../img/tovary/braslety.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/ukrashen.png") center center/cover no-repeat
-.keramic
-  background: url("../img/tovary/keramika_tea.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/chashki.png") center center/cover no-repeat
-.honey
-  background: url("../img/tovary/med_dik.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/med_v_tarelke.png") center center/cover no-repeat
-.lamps_wild
-  background: url("../img/tovary/stounheng_chast.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/nochnik.png") center center/cover no-repeat
-.gidrolats
-  background: url("../img/tovary/gidrolat.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/gidrolaty.png") center center/cover no-repeat
-.cosmetics
-  background: url("../img/tovary/mylo.png") center center/cover no-repeat
-  &:hover
-    background: url("../img/tovary/shampun.png") center center/cover no-repeat
+@media (max-width: 800px)
+  h1
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: 1.2px
+  h2
+    font-size: 28px
+    line-height: 35px
+    letter-spacing: 1px
+  h1, h2, h3
+    margin: 0
+  nav
+    margin: 0
+  .head
+    min-height: 100pt
+  .row
+    flex-direction: column
+    gap: 20px
+    row-gap: 20px
+    align-items: center
