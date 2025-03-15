@@ -54,7 +54,10 @@ main
   flex-wrap: wrap
   justify-content: space-around
   align-items: center
+  gap: 20px
+  margin: 40px
 @import "blocks/menu-buttons"
+@import "blocks/stiker"
 @import "blocks/catalog"
 @import "blocks/forms"
 @import "blocks/project"
@@ -63,7 +66,6 @@ main
 @import "blocks/main_aside"
 @import "blocks/footer"
 @import "blocks/pageup"
-
 
 .head
   background: url(../img/glav_head.png) center (center / cover) no-repeat
@@ -95,27 +97,7 @@ main
   margin: 20px 0
   h1
     margin: 20px
-.row
-  display: flex
-  gap: 20px
-  justify-content: space-around
-  margin: 40px
-.stiker_row
-  max-width: 700px
-  display: flex
-  justify-self: center
-  justify-content: space-around
-  flex-wrap: wrap
-img.stiker
-  width: 45px
-.stikers
-  width: 120px
-  margin: 10px
-  text-align: center
-  &_sum
-    font-size: 24px
-    color: #fee97d
-    font-weight: bold
+
 @media (max-width: 800px)
   h1
     font-size: 32px

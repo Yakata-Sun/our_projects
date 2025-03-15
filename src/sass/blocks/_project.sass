@@ -1,7 +1,6 @@
 .project
   display: flex
   flex-direction: column
-  gap: 40px
   margin-left: 40px
   width: 60%
   &._promo
@@ -21,9 +20,15 @@
         align-self: flex-start
   &_desc
     padding: 20px
+    display: flex
     img
-      float: left
+      display: block
+      border-radius: 20px/15px
+      min-width: 50%
       margin: 20px
+      align-self: center
+    &_text
+      align-self: center
     ul
       li
         list-style: none
@@ -31,3 +36,25 @@
           content: "•"
           margin-right: 10px
           color: #FEE97D
+.icons
+  width: 68px
+  margin: 10px
+  margin-left: 0
+.connect
+  display: flex
+  justify-content: space-around
+.link
+  padding-top: 20px
+  a
+    margin: 0 auto
+@media (max-width: 800px)
+  .project
+    width: 100%
+    &_item
+      padding: 10px
+      &_description
+        flex-direction: column
+        align-items: center
+        & img
+          width: 200px
+          align-self: center
