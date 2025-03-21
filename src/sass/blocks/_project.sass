@@ -6,18 +6,24 @@
   &._promo
     margin-top: 20px
   &_item
-    border: 2px solid #FEE97D
+    border: 1px solid #FEE97D
     padding: 15px
     border-radius: 20px/15px
+    margin: 10px 0
     &_description
       display: flex
       gap: 20px
       align-content: flex-start
-      & img
-        display: block
-        border-radius: 20px/15px
-        width: 300px
-        align-self: flex-start
+      &_image_project
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        & img
+          display: block
+          border-radius: 20px/15px
+          width: 300px
+      &_text
+        align-self: center
   &_desc
     padding: 20px
     display: flex
@@ -42,14 +48,20 @@
   margin-left: 0
 .connect
   display: flex
-  justify-content: space-around
+  width: 100%
+  justify-content: space-evenly
+  gap: 20px
 .link
   padding-top: 20px
+  padding-left: 5px
+  align-self: center
   a
     margin: 0 auto
-@media (max-width: 800px)
+@media (max-width: 1100px)
   .project
     width: 100%
+    margin: 10px auto
+    padding: 5px
     &_item
       padding: 10px
       &_description
@@ -58,3 +70,19 @@
         & img
           width: 200px
           align-self: center
+    &_desc
+      flex-direction: column
+      align-items: center
+      img
+        width: 300px
+  .connect
+    display: flex
+    width: 100%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .link
+      padding-top: 20px
+      align-self: center
+      a
+        margin: 0 auto

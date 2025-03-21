@@ -10,7 +10,7 @@ $(document).ready(function(){
     nextArrow: '<svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"  class="slick-next"><path d="M7 30h28M21 10l14 20-14 20" /></svg>  ',
     responsive: [
       {
-        breakpoint: 700,
+        breakpoint: 800,
         settings: {
         dots: true,
         arrows: false

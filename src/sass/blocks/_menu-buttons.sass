@@ -9,11 +9,6 @@
   padding: 0
   margin: 0 auto
   width: 100%
-  &_footer
-    flex-direction: column
-    li
-      width: 150px
-      border: none
   &_list
     list-style: none
     position: relative
@@ -77,20 +72,15 @@
   margin: auto auto
   -ms-flex-item-align: center
   align-self: center
-@media (max-width: 800px) 
-  .menu-bar
-    justify-content: center
-    &_list
-      width: 200px
-      margin: 0
-      flex-grow: 0
-@media (max-width: 600px)
+
+@media (max-width: 1100px)
   .menu-bar
     position: fixed
-    justify-content: stretch
+    justify-content: center
     bottom: 0
     left: 0
     width: 100%
+    padding-top: 10px
     background-color: rgba(7, 49, 63, 0.7)
     &_list
       margin: 0
@@ -99,6 +89,9 @@
       align-items: center
       transform: none
       margin: 0
+      min-width: 150px
+      margin: 0
+      flex-grow: 0
       li
         width: 100%
         margin: 0
