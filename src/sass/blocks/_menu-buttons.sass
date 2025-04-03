@@ -1,5 +1,5 @@
 .menu-bar
-  max-width: 1200px
+  max-width: 1400px
   height: fit-content
   display: flex
   flex-wrap: wrap
@@ -32,9 +32,10 @@
     text-decoration: underline
     &_active, &_active:hover
       text-decoration: none
+.glav_img_button
+  display: block
 
 .glav_img_button, .button, button
-  display: block
   border-radius: 5px
   border: 1px solid #fee97d
   cursor: pointer
@@ -47,26 +48,27 @@
     transition-duration: 0.3s
 .button, button
   background-color: #07313f
-  width: 200px
+  display: inline-block
   height: 50px
-  margin: 15px 0
+  width: 250px
+  margin: 0 auto
 
 .shop_button, .project_button
   display: flex
   align-items: center
-  min-width: 300px
-  min-height: 200px
+  width: 45%
+  min-height: 350px
   margin: 20 auto
   border-radius: 20px/15px
 
 .shop_button
-  background: url("../img/mas_glav.png") center (center / cover) no-repeat
+  background: url("../img/plants.png") center (center / cover) no-repeat
 
 .project_button
-  background: url("../img/master_glav.png") center (center / cover) no-repeat
+  background: url("../img/mast_glav.png") center (center / cover) no-repeat
 
 .glav_img_button
-  font-size: 1em
+  font-size: 1em  
   background-color: rgba(7, 49, 63, 0.7)
   padding: 3% 3%
   margin: auto auto
@@ -88,16 +90,14 @@
       justify-content: center
       align-items: center
       transform: none
-      margin: 0
-      min-width: 150px
-      margin: 0
+      margin: 0 auto
       flex-grow: 0
-      li
-        width: 100%
-        margin: 0
-        padding: 10px
-        text-align: center
-        border-radius: 0
+      padding: 5px 10px
+      text-align: center
     &_link
+      font-size: 1em
       transform: none
       text-align: center
+  .shop_button, .project_button  
+    min-width: 350px
+    min-height: 250px

@@ -28,8 +28,8 @@ try {
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
 	$mail->Port = 465;                                    // TCP port to connect to
 	 
-	$mail->setFrom('vajravarahi@mail.ru', 'Pulse');   // От кого письмо 
-	$mail->addAddress('ayakata@yandex.ru');     // Add a recipient
+	$mail->setFrom('vajravarahi@mail.ru', 'Новосвободная');   // От кого письмо 
+	$mail->addAddress('vajravarahi@mail.ru');     // Add a recipient
 	//$mail->addAddress('ellen@example.com');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');

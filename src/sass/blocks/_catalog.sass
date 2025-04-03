@@ -32,8 +32,9 @@
   &_active
     display: flex
 .catalog_item
-  min-height: 450px
-  width: 400px
+  font-size: 1em
+  min-height: 300px
+  width: 30%
   margin: 0.5%
   padding: 20px
   display: flex
@@ -53,7 +54,7 @@
     margin-top: 5px
   p
     text-align: left
-.lamps, .jewerly, .keramic, .honey, .lamps_wild, .gidrolats, .cosmetics, .dream, .massage, .dreamwoman, .master_class
+.plants, .lamps, .jewerly, .keramic, .honey, .lamps_wild, .gidrolats, .cosmetics, .dream, .massage, .dreamwoman, .master_class
   width: 80%
   height: 250px
   margin-bottom: 20px
@@ -61,6 +62,10 @@
   border-radius: 10px
   &:hover
     transition-duration: 1s
+.plants
+  background: url("../img/tovary/flower.png") center center/cover no-repeat
+  &:hover
+    background: url("../img/tovary/forz.png") center center/cover no-repeat
 .lamps
   background: url("../img/tovary/panda.png") center center/cover no-repeat
   &:hover
@@ -89,11 +94,16 @@
   background: url("../img/tovary/mylo.png") center center/cover no-repeat
   &:hover
     background: url("../img/tovary/shampun.png") center center/cover no-repeat
-@media (max-width: 600px)
+@media (max-width: 1100px)
   .catalog_content
     flex-direction: column
     row-gap: 20px
     align-items: center
+  .catalog_item
+    width: 45%
+    margin: 0 auto
+    padding: 10px 5px
+@media (max-width: 700px)
   .catalog_item
     width: 100%
     margin: 0 auto

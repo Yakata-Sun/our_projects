@@ -1,6 +1,8 @@
 .list_project
   padding: 0 10%
   border-radius: 20px/15px
+  & li a
+    width: 100%
 .main_aside
   list-style-type: none
   margin: 10px 0
@@ -8,10 +10,13 @@
   &_active, &:hover
     border-radius: 5px
     border: 1px solid #fee97d
-    box-shadow: inset 0 0 40px -10px rgba(254, 233, 125, 0.8)
+    box-shadow: inset 0 0 30px -10px rgba(254, 233, 125, 0.8)
+    padding: 0 5px
   &_menu
+    max-width: 25%
     border-radius: 10px
     border: 1px solid #fee97d
+    padding: 10px
     padding-top: 20px
     margin-left: 40px
 .hamburger
@@ -20,18 +25,14 @@
     display: none    
 @media (max-width: 1100px)
   .main_aside_menu
-    position: relative
-    padding: 0
+    width: 0
     border: none
-    &_menu
-      padding-top: 0
-      border-radius: 0
-      border: none
+    padding: 0
   .hamburger
     display: block
     position: fixed
     top: 20px
-    left: 10px
+    left: 20px
     width: 40px
     cursor: pointer
     border: 1px solid #fee97d
@@ -51,10 +52,11 @@
   .menu   
     position: fixed
     top: 60px 
-    left: -250px
-    width: 250px
+    left: -300px
+    width: 300px
     height: 100%
     background-color: rgb(7, 49, 63)
+    border: 0
     color: white
     transition: left 0.3s ease
     z-index: 1000

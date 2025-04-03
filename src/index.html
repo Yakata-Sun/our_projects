@@ -15,10 +15,22 @@
 <body>
   <header id="up">
     <div class="head">
-      <div class="soc">
-        <div><a href=""><img src="icons/vk.ico" alt="Новосвободная в контакте"></a></div>
-        <div><a href=""><img src="icons/telegram.ico" alt="Новосвободная в телеграм"></a></div>
-      </div>
+      <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(100677838, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/100677838" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     </div>
   </header>
   <main>
@@ -26,29 +38,29 @@
       <nav>
         <ul class="menu-bar">
           <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link menu-bar_link_active">Главная</a></li>
-          <li class="menu-bar_list"><a href="projects.html" class="menu-bar_link">Проекты</a></li>
           <li class="menu-bar_list"><a href="#products" class="menu-bar_link">Товары</a></li>
-          <li class="menu-bar_list"><a href="blog.html" class="menu-bar_link">Статьи</a></li>
-          <li class="menu-bar_list"><a href="" class="menu-bar_link">Друзья</a></li>
+          <li class="menu-bar_list"><a href="projects.html" class="menu-bar_link">Проекты</a></li>
+          <li class="menu-bar_list"><a href="plant.html" class="menu-bar_link">Питомник</a></li>
+          <li class="menu-bar_list"><a href="routes.html" class="menu-bar_link">Маршруты</a></li>
+          <li class="menu-bar_list"><a href="freinds.html" class="menu-bar_link">Друзья</a></li>
         </ul>
       </nav>
       <div class="row">
-        <div class="col-md-10 offset-md-1">
-          <h1 class="promo_header">
-            Арт-станица Новосвободная в предгорьях Северного Кавказа.
-          </h1>
+          <h3 class="promo_header">
+            Да! Это не безличный маркетплейс!
+          </h3>
+          <h1>Это проекты живых людей, уехавших из города в деревню в предгорья Северного Кавказа.</h1>
           <p>Добро пожаловать в нашу станицу Новосвободная! Здесь, вдали от городской суеты, собрались люди, которые
             реализуют уникальные проекты.
           </p>
           <p>Наша мечта — жить в обществе открытых и доброжелательных людей, заинтересованных в личном и общем развитии.
             И мы стараемся следовать своей мечте.</p>
-        </div>
       </div>
       <section class="row">
-        <div class="col shop_button">
-          <a href="#products" class="glav_img_button">Товары</a>
+        <div class="shop_button">
+          <a href="plant.html" class="glav_img_button">Питомник</a>
         </div>
-        <div class="col project_button">
+        <div class="project_button">
           <a href="projects.html" class="glav_img_button">Мастера и Мастерские</a>
         </div>
       </section>
@@ -93,7 +105,7 @@
           многое другое.
         </p>
       </div>
-      <section class="row catalog" id="products">
+      <section class="catalog" id="products">
         <ul class="catalog_tabs">
           <li class="catalog_tab catalog_tab_active">
             <div>Товары</div>
@@ -106,6 +118,14 @@
           </li>
         </ul>
         <div class="catalog_content catalog_content_active">
+          <div class="catalog_item">
+            <div class="plants"></div>
+            <h3>Саженцы красивых и полезных растений</h3>
+            <p>Мы все любим природу.</p>
+            <p>Почти в каждом дворе растут интересные растения, и, некоторые из них продаются.</p>
+            <p>Отличных подарок для любителей природы</p>
+            <a href="plant.html" class="button">Посмотреть</a>
+          </div>
           <div class="catalog_item">
             <div class="lamps"></div>
             <h3>Декоративные светильники из фанеры высшего сорта.</h3>
@@ -186,7 +206,7 @@
             <img src="img/tovary/massage.png" all="" class="massage">
             <h3>Массаж</h3>
             <p>Первоклассные мастера массажа различных направлений.</p>
-            <a href="" class="button">Посмотреть</a>
+            <a href="massage.html" class="button">Посмотреть</a>
           </div>
           <div class="catalog_item">
             <div class="lamps_wild"></div>
@@ -206,7 +226,7 @@
       </section>
       <section>
         <h2>Туристические маршруты</h2>
-        <div class="row">
+        <div class="row carousel">
           <div class="carousel_inner">
             <div><img src="img/tur/chasovnya.png" alt="Часовня Александра Второго возле станицы Новосвободная"></div>
             <div><img src="img/tur/cheremsha.png" alt="Весенний лес в горной Адыгее"></div>
@@ -219,7 +239,7 @@
             <div><img src="img/tur/doroga_na_lagonaki.png" alt="Дорога на Лаго-Наки"></div>
           </div>
           <div class="carousel_description">
-            <h3>Живописные места вокруг станицы Новосвободная</h3>
+            <h3>Живописные места вокруг нас</h3>
             <p>Здесь можно увидеть исторические памятники и природные достопримечательности.
             </p>
             <p>Отсюда можно отправиться по известным и редко посещаемым туристическим маршрутам.</p>
@@ -253,31 +273,32 @@
   <footer>
     <div class="container footer-flex">
       <div>
+        <h3>Наши проекты</h3>
         <ul class="list_project">
           <li class="main_aside"><a href="solma.html" class="main_aside_link">Домокомплекты "Солмадом"</a></li>
           <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">ЛПХ "Домик в Лесу"</a></li>
           <li class="main_aside"><a href="comfy-light.html" class="main_aside_link">Мастерская "Лампы из леса"</a></li>
-          <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
-          <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a>
-          </li>
           <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">Сказкотерапия Марии Яката</a>
           </li>
-          <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская
-              "Тепло"</a></li>
+          <li class="main_aside"><a href="cheeseme.html" class="main_aside_link">Домашняя сыроварня "Cheese Me"</a></li>
+          <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a>
+          </li>
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a>
+          </li>
+         
         </ul>
       </div>
       <div>
         <ul class="list_project">
-          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a>
-          </li>
-          <li class="main_aside"><a href="cheeseme.html" class="main_aside_link">Домашняя сыроварня "Cheese Me"</a></li>
-          <li class="main_aside"><a href="" class="main_aside_link">Массаж для женщин</a></li>
+          <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская
+            "Тепло"</a></li>
+          <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
+          <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
         </ul>
       </div>
       <div>
         <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp;source=constructor"
-          width="565" height="421" frameborder="0" style="border-radius: 15px">
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp;source=constructor">
         </iframe>
       </div>
     </div>
@@ -314,8 +335,7 @@
       <path d="M21 52V8M7 22l14-14 14 14" />
     </svg>
   </a>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/js.js"></script>
 </body>
