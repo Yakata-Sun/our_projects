@@ -10,25 +10,20 @@
 </head>
 <body>
   <header id="up">
-    <div class="head_other">
-        <img src="img/header_other.jpg" alt="Станица Новосвободная в Адыгее" class="image_other">
-    </div>
-    <div class="container">
-      <div class="row">
-          <nav>
-            <ul class="menu-bar">
-              <li class="menu-bar_list"><a href="index.html" class="menu-bar_link">Главная</a></li>
-              <li class="menu-bar_list"><a href="index.html#products" class="menu-bar_link">Товары</a></li>
-              <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link menu-bar_link_active">Проекты</a></li>
-              <!-- <li class="menu-bar_list"><a href="plant.html" class="menu-bar_link">Питомник</a></li> -->
-              <li class="menu-bar_list"><a href="routes.html" class="menu-bar_link">Маршруты</a></li>
-              <li class="menu-bar_list"><a href="freinds.html" class="menu-bar_link">Друзья</a></li>
-            </ul>
-          </nav>
-      </div>
-    </div>
   </header>
-  <main class="container">
+  <nav class="navbar">
+    <ul class="menu-bar">
+      <li class="menu-bar_list"><a href="index.html" class="menu-bar_link menu-bar_link_active">Главная</a></li>
+      <li class="menu-bar_list"><a href="index.html#products" class="menu-bar_link">Товары</a></li>
+      <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link">Проекты</a></li>
+      <li class="menu-bar_list"><a href="routes.html" class="menu-bar_link">Маршруты</a></li>
+      <li class="menu-bar_list"><a href="freinds.html" class="menu-bar_link">Друзья</a></li>
+    </ul>
+  </nav>
+  <div class="head_other">
+    <img src="img/header_other.jpg" alt="Станица Новосвободная в Адыгее" class="image_other">
+</div>
+  <main class="container-projects">
     <article class="main_aside_menu">
       <input type="checkbox" id="toggle">
       <label for="toggle" class="hamburger">
@@ -292,12 +287,11 @@
     </div>
   </footer>
   <a href="#up" class="pageUp">
-    <svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="#f0f0f0" stroke-width="4"
+    <svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="#0b2c37" stroke-width="4"
       stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
       <path d="M21 52V8M7 22l14-14 14 14" />
     </svg>
   </a>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
   <script>
     $(document).ready(function(){
       $(window).scroll(function(){

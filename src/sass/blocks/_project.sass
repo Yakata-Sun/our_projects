@@ -1,15 +1,21 @@
+.container-projects
+  display: flex
+  justify-content: space-between
 .project
   display: flex
   flex-direction: column
   margin-left: 40px
-  width: 60%
+  margin-top: 2rem
+  width: 70%
   &_promo
-    margin-bottom: 40px
+    text-align: center
+    margin-bottom: 2rem
   &_item
-    border: 1px solid #FEE97D
-    padding: 10px
-    border-radius: 20px/15px
-    margin: 10px 0
+    margin-bottom: 3rem
+    background: #124559
+    padding: 1.5rem
+    border-radius: 10px
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3)
     &_description
       display: flex
       gap: 20px
@@ -18,6 +24,9 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        & .button
+          box-shadow: inset 0 -4px 10px 4px rgba(0,0,0,0.3)
+          border: none
         & img
           display: block
           border-radius: 20px/15px
