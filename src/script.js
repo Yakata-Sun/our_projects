@@ -44,16 +44,6 @@ function renderNews() {
   });
 }
 
-document.getElementById('loadMoreNewsBtn').addEventListener('click', () => {
-  const extraNews = {
-    date: new Date().toLocaleDateString(),
-    title: "Новое объявление",
-    text: "Пример нового объявления."
-  };
-  newsItems.push(extraNews);
-  renderNews();
-});
-
 renderNews();
 // Открывает модальное окно для добавления объявления
 function openAddNewsModal() {
@@ -66,43 +56,39 @@ function closeModal(modalId) {
 }
 
 // Отправляет форму добавления нового объявления
-document.getElementById('addNewsForm').addEventListener('submit', function(e) {
+document.getElementById('addNewsForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  
+
   const title = document.getElementById('newsTitle').value;
   const text = document.getElementById('newsText').value;
-  
+
   if (title.trim() && text.trim()) {
     const newNewsItem = {
       date: new Date().toLocaleDateString(),
       title: title,
       text: text
     };
-    
-    // Добавляем новое объявление в массив (в реальном приложении отправьте данные на сервер)
-    newsItems.push(newNewsItem);
-    
+
+
     // Скрываем модальное окно добавления
     closeModal('addNewsModal');
-    
+
     // Показываем подтверждение
     document.getElementById('confirmationModal').style.display = 'block';
-    
-    // Обновляем список новостей
-    renderNews();
-    
+
+
     // Скрываем подтверждение через 3 секунды
     setTimeout(() => {
       closeModal('confirmationModal');
     }, 3000);
-    
+
     // Очищаем форму
     document.getElementById('addNewsForm').reset();
   }
 });
 
 // Обработчик клика outside модального окна для его закрытия
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target.className === 'modal') {
     event.target.style.display = 'none';
   }
@@ -112,7 +98,7 @@ window.onclick = function(event) {
 document.getElementById('loadMoreNewsBtn').addEventListener('click', openAddNewsModal);
 renderNews();
 // Форма подписки
-document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+document.getElementById('subscribeForm').addEventListener('submit', function (e) {
   e.preventDefault();
   const email = document.getElementById('email').value.trim();
   if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -123,96 +109,55 @@ document.getElementById('subscribeForm').addEventListener('submit', function(e) 
   }
 });
 //slaider
-let currentIndex = 0;
-    let slideInterval;
-    let isPaused = false;
+let slides = document.querySelectorAll('.slider-item'),
+    prev = document.querySelector('.prev'),
+    next = document.querySelector('.next'),
+    dotsDiv = document.querySelector('.slider-dots'),
+    dots = document.querySelectorAll('.dot'),
+    thumbnails = document.querySelectorAll('.thumbnail'), // новые миниатюры
+    slideIndex = 1;
 
-    // Инициализация индикаторов и нумерации
-    function initCarousel() {
-      const slides = document.querySelectorAll('.carousel-item');
-      const indicatorsContainer = document.getElementById('carouselIndicators');
+showSlide(slideIndex);
 
-      indicatorsContainer.innerHTML = '';
-      slides.forEach((_, index) => {
-        const indicator = document.createElement('div');
-        indicator.className = 'carousel-indicator';
-        if (index === 0) indicator.classList.add('active');
-        indicator.addEventListener('click', () => showSlide(index));
-        indicatorsContainer.appendChild(indicator);
-      });
+function showSlide(n) {
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
 
-      updateCarousel();
+  slides.forEach((item) => item.style.display = 'none');
+  dots.forEach((item) => item.classList.remove('dot-active'));
+  thumbnails.forEach((item) => item.classList.remove('active')); // убираем active с миниатюр
+
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].classList.add('dot-active');
+  thumbnails[slideIndex - 1].classList.add('active'); // добавляем active к текущей миниатюре
+}
+
+function nextSlide(n) {
+  slideIndex += n;
+  showSlide(slideIndex);
+}
+
+function dotSlide(n) {
+  slideIndex = n;
+  showSlide(slideIndex);
+}
+
+// События для стрелок
+next.addEventListener('click', () => nextSlide(1));
+prev.addEventListener('click', () => nextSlide(-1));
+
+// Событие для точек
+dotsDiv.addEventListener('click', function (event) {
+  for (let i = 0; i < dots.length; i++) {
+    if (event.target === dots[i]) {
+      dotSlide(i + 1); // точки начинаются с индекса 0, слайды с 1
     }
+  }
+});
 
-    // Показать текущий слайд
-    function showSlide(index) {
-      const slides = document.querySelectorAll('.carousel-item');
-      const indicators = document.querySelectorAll('.carousel-indicator');
-      const counter = document.getElementById('carouselCounter');
-
-      if (index >= slides.length) currentIndex = 0;
-      else if (index < 0) currentIndex = slides.length - 1;
-      else currentIndex = index;
-
-      const offset = -currentIndex * 100;
-      document.getElementById('carouselInner').style.transform = `translateX(${offset}%)`;
-
-      // Обновить индикаторы
-      indicators.forEach((ind, i) => {
-        ind.classList.toggle('active', i === currentIndex);
-      });
-
-      // Обновить нумерацию
-      counter.textContent = `${currentIndex + 1} / ${slides.length}`;
-    }
-
-    function nextSlide() {
-      if (!isPaused) showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-      if (!isPaused) showSlide(currentIndex - 1);
-    }
-
-    function startAutoSlide() {
-      stopAutoSlide(); // Очистка предыдущего интервала
-      slideInterval = setInterval(() => {
-        nextSlide();
-      }, 5000);
-    }
-
-    function stopAutoSlide() {
-      clearInterval(slideInterval);
-    }
-
-    // Автопауза при наведении
-    const carousel = document.getElementById('newsCarousel');
-    carousel.addEventListener('mouseenter', () => isPaused = true);
-    carousel.addEventListener('mouseleave', () => isPaused = false);
-
-    // Поддержка свайпа
-    let touchStartX = 0;
-    carousel.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    carousel.addEventListener('touchend', e => {
-      const touchEndX = e.changedTouches[0].screenX;
-      if (touchEndX < touchStartX - 50) nextSlide();
-      if (touchEndX > touchStartX + 50) prevSlide();
-    });
-
-    // Обработчики кнопок "Подробнее"
-    document.querySelectorAll('.description-toggle').forEach((btn, index) => {
-      btn.addEventListener('click', () => {
-        const description = btn.previousElementSibling;
-        const isOpen = description.classList.contains('open');
-        description.classList.toggle('open');
-        btn.textContent = isOpen ? 'Подробнее' : 'Скрыть';
-      });
-    });
-
-    // Инициализация
-    initCarousel();
-    startAutoSlide();
-
+// Событие для миниатюр
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    dotSlide(index + 1); // слайды начинаются с 1
+  });
+});
