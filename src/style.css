@@ -127,18 +127,75 @@ h1, h2, h3, h4 {
 /* About Section */
 .about-section {
   padding: 4rem 0;
-  background-color: #124559;
-  text-align: center;
-  margin: 0 auto;
+  background-color: rgb(18, 69, 89);
   background-image: url('img/glav_head.png');
   background-size: cover;
+  background-position: center;
+  color: #f0f0f0;
+  text-align: center;
 }
 
-.about-section h1 {
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-text {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 4rem 3rem;
+  text-align: left;
+  background-color: rgba(18, 69, 89, 0.5);
+  border-radius: 12px;
+}
+
+.about-text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: left;
   margin-bottom: 1rem;
-  padding: 150px 0;
 }
 
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Средние экраны (планшеты) */
+@media (max-width: 990px) {
+  .about-text {
+    padding: 2rem 2rem;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .about-text {
+    padding: 2rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
 /* News Section */
 .news-section {
   padding: 4rem 0;
@@ -433,6 +490,9 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
+}
+.footer-flex h2 {
+  color: #c78030;
 }
 
 .footer-flex ul {

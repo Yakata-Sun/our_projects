@@ -91,39 +91,58 @@
                 </div>
         </article>
   </main>
+  <!-- Footer -->
   <footer>
-    <div class="container footer-flex">
+    <div class="container footer-flex  fade-in">
       <div>
-        <h3>Наши проекты</h3>
+        <h2>Наши проекты</h2>
         <ul class="list_project">
           <li class="main_aside"><a href="solma.html" class="main_aside_link">Домокомплекты "Солмадом"</a></li>
           <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">ЛПХ "Домик в Лесу"</a></li>
           <li class="main_aside"><a href="comfy-light.html" class="main_aside_link">Мастерская "Лампы из леса"</a></li>
-          <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">Сказкотерапия Марии Яката</a></li>
+          <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">Сказкотерапия Марии Яката</a>
+          </li>
           <li class="main_aside"><a href="cheeseme.html" class="main_aside_link">Домашняя сыроварня "Cheese Me"</a></li>
           <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a>
           </li>
-          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a></li>
-         
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a>
+          </li>
         </ul>
       </div>
       <div>
         <ul class="list_project">
-          <li class="main_aside"><a href="forest-patch.html" class="main_aside_link">Швейная мастерская "Forest Patch"</a>
+          <li class="main_aside"><a href="forest-patch.html" class="main_aside_link">Швейная мастерская "Forest
+              Patch"</a>
           </li>
-          <li class="main_aside"><a href="" class="main_aside_link">Массаж для женщин</a></li>
-          <li class="main_aside main_aside_active"><a href="#" class="main_aside_link">Керамическая мастерская
-            "Тепло"</a></li>
-            <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
+          <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская
+                "Тепло"</a></li>
+          <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
+          <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
         </ul>
       </div>
       <div>
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp;source=constructor">
-        </iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp ;source=constructor"
+                width="400" height="300" frameborder="0"></iframe>
       </div>
+      <p>Наша мечта — жить в обществе открытых и доброжелательных людей, заинтересованных в личном и общем развитии.<br>
+    Мы стараемся следовать своей мечте.</p>
     </div>
+    
   </footer>
-  <script type="text/javascript" src="js/js.js"></script>
+
+  <!-- Scroll to Top -->
+  <a href="#up" class="pageUp"><b>↑</b></a>
+  <script>
+  const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    faders.forEach(el => appearOnScroll.observe(el));</script>
+
 </body>
 </html>

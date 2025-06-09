@@ -6,23 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Проекты станицы Новосвободная</title>
   <meta name="description" content="Сообщество людей, увлеченных своим делом. Здесь вы найдете авторские проекты и оригинальные подарки.">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="styleOther.css">
 </head>
 <body>
   <header id="up">
   </header>
-  <nav class="navbar">
+  <nav class="navbar fade-in">
     <ul class="menu-bar">
-      <li class="menu-bar_list"><a href="index.html" class="menu-bar_link menu-bar_link_active">Главная</a></li>
+      <li class="menu-bar_list"><a href="index.html" class="menu-bar_link">Главная</a></li>
       <li class="menu-bar_list"><a href="index.html#products" class="menu-bar_link">Товары</a></li>
-      <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link">Проекты</a></li>
+      <li class="menu-bar_list menu-bar_list_active"><a href="#" class="menu-bar_link menu-bar_link_active">Проекты</a></li>
       <li class="menu-bar_list"><a href="routes.html" class="menu-bar_link">Маршруты</a></li>
       <li class="menu-bar_list"><a href="freinds.html" class="menu-bar_link">Друзья</a></li>
     </ul>
   </nav>
-  <div class="head_other">
-    <img src="img/header_other.jpg" alt="Станица Новосвободная в Адыгее" class="image_other">
-</div>
+   <!-- About Section -->
+   <section class="about-section fade-in">
+    <div class="container about-container">
+      <div class="about-text">
+        <h1>Проекты станицы Новосвободная</h1>
+        <p>Здесь создаются авторские светильники и декоративные предметы интерьера, шьются красивые и удобные вещи,
+          изготавливается натуральная косметика и керамическая посуда. Есть несколько питомников растений, сад,
+          основанный на принципах пермакультуры. Работает цех по производству соломенных панелей для экодомов. И
+          многое другое.</p>
+      </div>
+    </div>
+  </section>
   <main class="container-projects">
     <article class="main_aside_menu">
       <input type="checkbox" id="toggle">
@@ -32,7 +41,6 @@
         <span></span>
       </label>
       <div class="menu">
-        <h3>Проекты</h3>
         <ul class="list_project">
           <li class="main_aside"><a href="solma.html" class="main_aside_link">Домокомплекты "Солмадом"</a></li>
           <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">ЛПХ "Домик в Лесу"</a></li>
@@ -55,15 +63,12 @@
       </div>
     </article>
     <article class="project">
-      <div class="project_promo">
-        <h1>Проекты станицы Новосвободная</h1>
-      </div>
       <section class="project_item">
         <h2>Экопроизводство домокомплектов из соломенных панелей<br>Солмадом</h2>
         <div class="project_item_description">
           <div class="project_item_description_image_project">
             <img src="img/projects/g_kw4ecFWlg.jpg" alt="экодома из соломенных панелей" class="">
-            <a href="solma.html" class="button">Посмотреть</a>
+            <a href="solma.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Мы стремимся производить максимально качественные домокомплекты из натуральных материалов по
@@ -83,7 +88,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/domik_v_lesu_logo.jpg" alt="личное подсобное хозяйство Домик в лесу" class="">
-          <a href="house-in-forest.html" class="button">Посмотреть</a>
+          <a href="house-in-forest.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Семейное подсобное хозяйство и мастерская. Занимается огородом, садом, изготовлением натуральных
@@ -103,7 +108,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/logoComfy-white.png" alt="авторские декоративные светильники" class="">
-          <a href="comfy-light.html" class="button">Посмотреть</a>
+          <a href="comfy-light.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Стильные авторские светильники и ночники из цельного дерева и фанеры высшего сорта.</p>
@@ -119,7 +124,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/skazka_door.png" alt="терапевтические сказки для взрослых, сказкотерапия" class="">
-          <a href="dream-to-health.html" class="button">Посмотреть</a>
+          <a href="dream-to-health.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Откройте для себя сказкотерапию - сказки на стыке психологии и искусства!
@@ -137,7 +142,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/cheeseme/cheeseme-logo.png" alt="натуральный козий сыр" class="">
-          <a href="cheeseme.html" class="button">Посмотреть</a>
+          <a href="cheeseme.html" class="load-more">Посмотреть</a>
         </div>
           <div class="project_item_description_text">
             <p>Наша мини-ферма расположена на краю земли, где животные питаются только лучшей травой и получают уход и
@@ -154,7 +159,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/gidrolat_ALLy.png" alt="домашние гидролаты" class="">
-          <a href="gidrolat-moon-ally.html" class="button">Посмотреть</a>
+          <a href="gidrolat-moon-ally.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Моя любовь к гидролатам пришла с первого момента ощущения на коже. Тогда я поняла, что могу и хочу делать
@@ -174,7 +179,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/ally.png" alt="обучение английскому языку" class="">
-          <a href="english-with-ally.html" class="button">Посмотреть</a>
+          <a href="english-with-ally.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Хотите говорить на английском уверенно?
@@ -192,7 +197,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects//forestpatch/logo_forest.jpg" alt="лоскутные юбки из лоскутков" class="">
-          <a href="forest-patch.html" class="button">Посмотреть</a>
+          <a href="forest-patch.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Лоскутные юбки, платья, сарафаны, шопперы, кастомайзинг одежды, бохо-одежда, которая всегда существует только в единственном экземпляре.</p>
@@ -208,7 +213,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/keramika_tea.png" alt="керамическая мастерская" class="">
-          <a href="keramika-teplo.html" class="button">Посмотреть</a>
+          <a href="keramika-teplo.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Авторская керамическая посуда и предметы интерьера</p>
@@ -227,7 +232,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/massage_maslo.png" alt="массаж для женщин в станице Новосвободная" class="">
-          <a href="massage.html" class="button">Посмотреть</a>
+          <a href="massage.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Восстановите свою энергию - найдите время для себя.</p>
@@ -241,7 +246,7 @@
         <div class="project_item_description">
           <div class="project_item_description_image_project">
           <img src="img/projects/logo.png" alt="гостевая площадка в горах Адыгеи крот новосвободный" class="">
-          <a href="krot.html" class="button">Посмотреть</a>
+          <a href="krot.html" class="load-more">Посмотреть</a>
           </div>
           <div class="project_item_description_text">
             <p>Волшебный сад с гостевыми домиками, площадкой для кемпинга и пространством для занятий и игр.</p>
@@ -253,64 +258,58 @@
     </div>
     
   </main>
+  <!-- Footer -->
   <footer>
-    <div class="container footer-flex">
+    <div class="container footer-flex  fade-in">
       <div>
-        <h3>Наши проекты</h3>
+        <h2>Наши проекты</h2>
         <ul class="list_project">
           <li class="main_aside"><a href="solma.html" class="main_aside_link">Домокомплекты "Солмадом"</a></li>
           <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">ЛПХ "Домик в Лесу"</a></li>
           <li class="main_aside"><a href="comfy-light.html" class="main_aside_link">Мастерская "Лампы из леса"</a></li>
-          <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">Сказкотерапия Марии Яката</a></li>
+          <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">Сказкотерапия Марии Яката</a>
+          </li>
           <li class="main_aside"><a href="cheeseme.html" class="main_aside_link">Домашняя сыроварня "Cheese Me"</a></li>
           <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">Гидролаты Лунной Элли</a>
           </li>
-          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a></li>
-          
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Обучение английскому языку</a>
+          </li>
         </ul>
       </div>
       <div>
         <ul class="list_project">
-          <li class="main_aside"><a href="forest-patch.html" class="main_aside_link">Швейная мастерская "Forest Patch"</a>
+          <li class="main_aside"><a href="forest-patch.html" class="main_aside_link">Швейная мастерская "Forest
+              Patch"</a>
           </li>
-          <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
           <li class="main_aside"><a href="keramika-teplo.html" class="main_aside_link">Керамическая мастерская
-            "Тепло"</a></li>
-          <li class="main_aside"><a href="krot.html" class="main_aside_link">Проект "Крот Новосвободный"</a></li>
+                "Тепло"</a></li>
+          <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
+          <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
         </ul>
       </div>
       <div>
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp;source=constructor">
-        </iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c8ea33a8d4e8ee8953360f461c50efea6919c923c8845376a72843b2d7661a9&amp ;source=constructor"
+                width="400" height="300" frameborder="0"></iframe>
       </div>
+      <p>Наша мечта — жить в обществе открытых и доброжелательных людей, заинтересованных в личном и общем развитии.<br>
+    Мы стараемся следовать своей мечте.</p>
     </div>
+    
   </footer>
-  <a href="#up" class="pageUp">
-    <svg width="42" height="60" viewBox="0 0 42 60" fill="none" stroke="#0b2c37" stroke-width="4"
-      stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 52V8M7 22l14-14 14 14" />
-    </svg>
-  </a>
+
+  <!-- Scroll to Top -->
+  <a href="#up" class="pageUp"><b>↑</b></a>
   <script>
-    $(document).ready(function(){
-      $(window).scroll(function(){
-    if($(this).scrollTop() > 1000) {
-      $('.pageUp').fadeIn('slow');
-    } else {
-      $('.pageUp').fadeOut();
-    }
-  });  
-  $('a[href^="#"').on('click', function() {
-
-    const href = $(this).attr('href');
-
-  $('html, body').animate({
-      scrollTop: $(href).offset().top
-  });
-  return false;
-});});
-  </script>
+  const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    
+    faders.forEach(el => appearOnScroll.observe(el));</script>
 </body>
 
 </html>
