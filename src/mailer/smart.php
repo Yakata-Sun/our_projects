@@ -1,8 +1,6 @@
 <?php 
 
-$name = $_POST['name'];
-$contact = $_POST['contact'];
-$descr = $_POST['descr'];
+$mailNew = $_POST['email'];
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -19,7 +17,7 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 try {
-	$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+	//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -30,7 +28,7 @@ try {
 	 
 	$mail->setFrom('vajravarahi@mail.ru', 'Новосвободная');   // От кого письмо 
 	$mail->addAddress('vajravarahi@mail.ru');     // Add a recipient
-	//$mail->addAddress('ellen@example.com');               // Name is optional
+	$mail->addAddress('ayakata@yandex.ru');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
 	//$mail->addBCC('bcc@example.com');
@@ -40,15 +38,17 @@ try {
 	
 	$mail->Subject = 'Данные';
 	$mail->Body    = '
-			Пользователь оставил данные <br> 
-		Имя: ' . $name . ' <br>
-		Номер телефона: ' . $contact . '<br>
-		Сообщение: ' . $descr . '';
+			Новая подписка на рассылку Новосвободной <br> 
+		email: ' . $mailNew . '';
 	
 	$mail->send();
 
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
+echo json_encode([
+  'status' => 'success',
+  'message' => 'Подписка успешно обработана'
+]);
+exit;
 ?>

@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новосвободная - арт-станица в горной Адыгее</title>
   <meta name="description" content="Здесь вы найдете оригинальные подарки, авторские светильники, украшения, посуду, одежду, натуральную косметику и многое другое">
+  <link  rel= "apple-touch-icon"  sizes= "57x57"  href= "/apple-icon-57x57.png" > 
+<link  rel= "apple-touch-icon"  sizes= "60x60"  href= "/apple-icon-60x60.png" > 
+<link  rel= "apple-touch-icon"  sizes= "72x72"  href= "/apple-icon-72x72.png" > 
+<link  rel= "apple-touch-icon"  sizes= "76x76"  href= "/apple-icon-76x76.png" > 
+<link  rel= "apple-touch-icon"  sizes= "114x114"  href= "/apple-icon-114x114.png" > 
+<link  rel= "apple-touch-icon"  sizes= "120x120"  href= "/apple-icon-120x120.png" > 
+<link  rel= "apple-touch-icon"  sizes= "144x144"  href= "/apple-icon-144x144.png" > 
+<link  rel= "apple-touch-icon"  sizes= "152x152"  href= "/apple-icon-152x152.png" > 
+<link  rel= "apple-touch-icon"  sizes= "180x180"  href= "/apple-icon-180x180.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "192x192"   href= "/android-icon-192x192.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "32x32"  href= "/favicon-32x32.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "96x96"  href= "/favicon-96x96.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "16x16"  href= "/favicon-16x16.png" > 
+<link  rel= "manifest"  href= "/manifest.json" > 
+<meta  name= "msapplication-TileColor"  content= "#ffffff" > 
+<meta  name= "msapplication-TileImage"  content= "/ms-icon-144x144.png" > 
+<meta  name= "theme-color"  content= "#ffffff" ><link  rel= "apple-touch-icon"  sizes= "57x57"  href= "/apple-icon-57x57.png" > 
+<link  rel= "apple-touch-icon"  sizes= "60x60"  href= "icons/apple-icon-60x60.png" > 
+<link  rel= "apple-touch-icon"  sizes= "72x72"  href= "icons/apple-icon-72x72.png" > 
+<link  rel= "apple-touch-icon"  sizes= "76x76"  href= "icons/apple-icon-76x76.png" > 
+<link  rel= "apple-touch-icon"  sizes= "114x114"  href= "icons/apple-icon-114x114.png" > 
+<link  rel= "apple-touch-icon"  sizes= "120x120"  href= "icons/apple-icon-120x120.png" > 
+<link  rel= "apple-touch-icon"  sizes= "144x144"  href= "icons/apple-icon-144x144.png" > 
+<link  rel= "apple-touch-icon"  sizes= "152x152"  href= "icons/apple-icon-152x152.png" > 
+<link  rel= "apple-touch-icon"  sizes= "180x180"  href= "icons/apple-icon-180x180.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "192x192"   href= "icons/android-icon-192x192.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "32x32"  href= "icons/favicon-32x32.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "96x96"  href= "icons/favicon-96x96.png" > 
+<link  rel= "icon"  type= "image/png"  sizes= "16x16"  href= "icons/favicon-16x16.png" > 
+<link  rel= "manifest"  href= "icons/manifest.json" > 
+<meta  name= "msapplication-TileColor"  content= "#ffffff" > 
+<meta  name= "msapplication-TileImage"  content= "icons/ms-icon-144x144.png" > 
+<meta  name= "theme-color"  content= "#ffffff" >
   <link rel="stylesheet" href="styleIndex.min.css">
 </head>
 <body>
@@ -62,9 +95,34 @@
     <div class="container news-container">
       <h2>Новости и объявления</h2>
       <div class="news-cards" id="newsCards">
-        <!-- Cards will be added by JS -->
+        <!-- Пример карточки новости -->
+        <div class="news-card">
+          <div class="date"></div>
+          <h3>Гостевые дома</h3>
+          <p>Хотите отдохнуть в нашей станице Новосвободная и самостоятельно посетить ее окрестности?</p>
+          <!-- <a href="#" class="load-more">Посмотреть</a> -->
+        </div>
+  
+        <div class="news-card">
+          <div class="date"></div>
+          <h3>Экскурсии по станице Новосвободная и ее окрестностям</h3>
+          <p>Посетите уникальное скопление памятников неолита-дольменов, пройдитесь по каньону реки Фарс и другим достопримечательностям с нашими гидами.</p>
+          <!-- <a href="#" class="load-more">Посмотреть</a> -->
+        </div>
+
+        <div class="news-card">
+          <div class="date"></div>
+          <h3>Мастер-классы</h3>
+          <p>Есть мастер-классы по сакральной геометрии, керамике, линогравюре, игре на варганах. </p>
+          <!-- <a href="#" class="load-more">Посмотреть</a> -->
+        </div>
+  
+
+  
+        <!-- Добавьте больше карточек по аналогии -->
       </div>
-      <button id="loadMoreNewsBtn" class="load-more">Предложить объявление</button>
+  
+      <button id="loadMoreNewsBtn" class="load-more">Подробнее</button> 
     </div>
   </section>
 <!-- <section class="main-content container fade-in">
@@ -242,7 +300,7 @@
           <a href="english-with-ally.html" class="load-more">Посмотреть</a>
         </div>
       </div>
-      <div class="catalog_content" data-tab-id="housing">
+      <div class="catalog_content" data-tab-id="housing" id="house">
         <div class="catalog_item">
           <h3>Гостевой дом у реки Фарс</h3>
           <p>Тихий отдых среди природы.</p>
@@ -257,7 +315,7 @@
   <div class="container subscribe-container">
     <h2>Подпишитесь на новости</h2>
     <form id="subscribeForm" class="subscribe-form">
-      <input type="email" id="email" placeholder="Ваш email" required />
+      <input type="email" id="email" name = "email" placeholder="Ваш email" required />
       <button type="submit" class="btn">Подписаться</button>
     </form>
   </div>
@@ -308,31 +366,41 @@
 <div class="modal" id="addNewsModal">
   <div class="modal-content">
     <span class="close-btn">&times;</span>
-    <h2>Добавить новое объявление</h2>
+    <h2>Добрый день!</h2>
+    <p>Этот раздел находится в разработке. Пока вы можете посмотреть гостевые дома ниже на странице, самостоятельно связаться с мастерами в разделе "Проекты", или оставить заявку на экскурсию у нас на сайте</p>
     <form id="addNewsForm">
       <div class="form-group">
-        <label for="newsTitle">Заголовок:</label>
+        <label for="newsTitle">Ваши контакты</label>
         <input type="text" id="newsTitle" name="title" required>
       </div>
       <div class="form-group">
-        <label for="newsText">Текст объявления:</label>
+        <label for="newsText">Ваше сообщение:</label>
         <textarea id="newsText" name="text" required></textarea>
       </div>
-      <button type="submit">Отправить на проверку</button>
+      <button type="submit" id="btnSubmit">Отправить</button>
     </form>
   </div>
 </div>
 
 <!-- Модальное окно для подтверждения отправки -->
-<div class="modal" id="confirmationModal">
+<div class="modal" id="thanks">
   <div class="modal-content">
-    <h2>Объявление отправлено</h2>
-    <p>Ваше объявление отправлено на проверку. Оно появится на сайте после модерации.</p>
+    <h2>Благодарим за подписку!</h2>
   </div>
 </div>
+
+<!-- Модальное окно про разработку -->
+<div class="modal" id="work">
+  <div class="modal-content">
+    <h2>Добрый день!</h2>
+    <p>Этот раздел находится в разработке. Пока вы можете посмотреть гостевые дома ниже на странице, самостоятельно связаться с мастерами в разделе "Проекты", или оставить заявку на экскурсию у нас на сайте</p>
+    <button id="ok" class="load-more">Ok</button>
+  </div>
+</div>
+
+
   <!-- Scripts -->
   <script src="script.js">
-    
   </script>
 </body>
 </html>

@@ -11,103 +11,120 @@ const appearOnScroll = new IntersectionObserver((entries) => {
 faders.forEach(el => appearOnScroll.observe(el));
 
 // === Табы ===
-document.querySelectorAll('.catalog_tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.catalog_tab').forEach(t => t.classList.remove('catalog_tab_active'));
-    document.querySelectorAll('.catalog_content').forEach(c => c.classList.remove('catalog_content_active'));
 
-    tab.classList.add('catalog_tab_active');
-    const target = tab.dataset.tab;
-    document.querySelector(`[data-tab-id="${target}"]`).classList.add('catalog_content_active');
+const TabsModule = (function () {
+  // Приватные переменные
+  const tabButtons = document.querySelectorAll('.catalog_tab');
+  const tabContents = document.querySelectorAll('.catalog_content');
+
+  // Установка начального активного таба
+  function initActiveTab() {
+    const activeTab = document.querySelector('.catalog_tab_active');
+    if (activeTab) {
+      const target = activeTab.dataset.tab;
+      const content = document.querySelector(`[data-tab-id="${target}"]`);
+      if (content) {
+        content.classList.add('catalog_content_active');
+      }
+    }
+  }
+
+  // Переключение табов
+  function switchTab(event) {
+    const clickedTab = event.currentTarget;
+    const target = clickedTab.dataset.tab;
+
+    // Удаляем классы у всех табов и контента
+    tabButtons.forEach(tab => tab.classList.remove('catalog_tab_active'));
+    tabContents.forEach(content => content.classList.remove('catalog_content_active'));
+
+    // Добавляем классы к выбранному табу и контенту
+    clickedTab.classList.add('catalog_tab_active');
+    const targetContent = document.querySelector(`[data-tab-id="${target}"]`);
+    if (targetContent) {
+      targetContent.classList.add('catalog_content_active');
+    }
+  }
+
+  // Назначаем обработчики событий
+  function bindEvents() {
+    tabButtons.forEach(tab => {
+      tab.addEventListener('click', switchTab);
+    });
+  }
+
+  // Инициализация модуля
+  function init() {
+    initActiveTab();
+    bindEvents();
+  }
+
+  return {
+    init: init
+  };
+})();
+
+// Запуск модуля после загрузки DOM
+document.addEventListener('DOMContentLoaded', () => {
+  TabsModule.init();
+});
+
+//кнопка подробнее
+  function modal(){
+    document.getElementById('work').style.display = 'block';
+    document.getElementById('ok').addEventListener('click', function(){
+      document.getElementById('work').style.display = 'none';
+    })
+  }
+  document.getElementById('loadMoreNewsBtn').addEventListener('click', modal);
+
+  // subscribe
+  document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const emailInput = document.getElementById('email');
+  
+    const email = emailInput.value.trim();
+
+    function openThanks() {
+      document.getElementById('thanks').style.display = 'block';
+    }
+    function closeThanks() {
+      document.getElementById('thanks').style.display = 'none';
+    }
+  
+    if (!validateEmail(email)) {
+      alert('Пожалуйста, введите корректный email.');
+      return;
+    }
+  
+    fetch('mailer/smart.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: 'email=' + encodeURIComponent(email)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        console.log(data);
+        emailInput.value = '';
+        openThanks();
+        console.log('Спасибо за подписку!');
+        setTimeout(closeThanks, 3000);
+      }
+    })
+    .catch(error => {
+      console.error('Ошибка:', error);
+    });
   });
-});
-
-// Массив новостей/объявлений
-const newsItems = [
-  { date: "05.04.2025", title: "Рассписание автобуса", text: "Из станицы автобус отправляется в 6:10, 14:10, 19:00 </br> Из Майкопа в станицу автобус отправляется в 12:00 и 17:00" },
-  { date: "01.04.2025", title: "Мобильная связь", text: "В станице работает только оператор Теле2" },
-  { date: "28.03.2025", title: "Мастер-классы", text: "Открыта запись на мастер-классы по керамике, линогравюре, игре на варганах " }
-];
-
-function renderNews() {
-  const container = document.getElementById('newsCards');
-  container.innerHTML = '';
-  newsItems.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'news-card';
-    card.innerHTML = `
-      <span class="date">${item.date}</span>
-      <h3>${item.title}</h3>
-      <p>${item.text}</p>
-    `;
-    container.appendChild(card);
-  });
-}
-
-renderNews();
-// Открывает модальное окно для добавления объявления
-function openAddNewsModal() {
-  document.getElementById('addNewsModal').style.display = 'block';
-}
-
-// Закрывает модальное окно
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
-}
-
-// Отправляет форму добавления нового объявления
-document.getElementById('addNewsForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const title = document.getElementById('newsTitle').value;
-  const text = document.getElementById('newsText').value;
-
-  if (title.trim() && text.trim()) {
-    const newNewsItem = {
-      date: new Date().toLocaleDateString(),
-      title: title,
-      text: text
-    };
-
-
-    // Скрываем модальное окно добавления
-    closeModal('addNewsModal');
-
-    // Показываем подтверждение
-    document.getElementById('confirmationModal').style.display = 'block';
-
-
-    // Скрываем подтверждение через 3 секунды
-    setTimeout(() => {
-      closeModal('confirmationModal');
-    }, 3000);
-
-    // Очищаем форму
-    document.getElementById('addNewsForm').reset();
+  
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   }
-});
 
-// Обработчик клика outside модального окна для его закрытия
-window.onclick = function (event) {
-  if (event.target.className === 'modal') {
-    event.target.style.display = 'none';
-  }
-}
-
-// Инициализация
-document.getElementById('loadMoreNewsBtn').addEventListener('click', openAddNewsModal);
-renderNews();
-// Форма подписки
-document.getElementById('subscribeForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value.trim();
-  if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    alert("Вы успешно подписаны!");
-    this.reset();
-  } else {
-    alert("Введите корректный email.");
-  }
-});
 //slaider
 let slides = document.querySelectorAll('.slider-item'),
     prev = document.querySelector('.prev'),
