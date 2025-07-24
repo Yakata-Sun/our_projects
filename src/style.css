@@ -299,6 +299,7 @@ img {
 .catalog_tabs {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   list-style: none;
   margin-bottom: 2rem;
@@ -309,16 +310,32 @@ img {
   cursor: pointer;
   font-weight: 700;
   font-size: 20px;
+  color: var(--accent-color);
   position: relative;
   padding: 0.5rem 0; /* Для увеличения области клика */
+}
+
+.catalog_tab::after {
+  content: '';
+  position: absolute;
+  bottom: -0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: var(--transition-base);
+}
+
+.catalog_tab:hover::after {
+  width: 80%;
 }
 
 .catalog_tab_active::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
-  width: 60%;
+  width: 80%;
   height: 2px;
   background: var(--accent-gradient);
 }
@@ -493,6 +510,10 @@ img {
   padding: 2px 0; /* Немного отступа для линии */
 }
 
+.list_project li a:hover {
+  color: var(--accent-color);
+}
+
 .list_project li a:after {
   content: '';
   display: block;
@@ -546,7 +567,7 @@ img {
   width: 40px;
   height: 40px;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.2);
+  background-color: var(--card-background);
   border-radius: var(--border-radius-circle);
   display: flex;
   align-items: center;
@@ -555,7 +576,7 @@ img {
 }
 
 .prev:hover, .next:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--background-main);
 }
 
 .prev {
@@ -566,7 +587,6 @@ img {
   right: 10px;
 }
 
-/* Стрелки SVG (предполагается, что они встроены как фоновые изображения или через ::before/::after) */
 .arrow-left,
 .arrow-right {
   width: 20px;
@@ -574,14 +594,15 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.8;
-  transition: opacity var(--transition-base);
-  /* Используйте SVG или base64 для этих изображений */
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E"); */
+  transition: var(--transition-base);
 }
 
 .arrow-right {
-   /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E"); */
+   background-image: url("icons/arrowRight.ico");
+}
+
+.arrow-left {
+   background-image: url("icons/arrowLeft.ico");
 }
 
 .prev:hover .arrow-left,
@@ -634,9 +655,10 @@ img {
 }
 
 .footer-flex ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  background-color: var(--card-background);
+  list-style: none;
+  padding: 1.5rem;
 }
 
 .footer-flex li {
@@ -651,7 +673,6 @@ img {
 
 .footer-flex a:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 
 .footer-flex iframe {

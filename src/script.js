@@ -162,7 +162,7 @@ function validateEmail(email) {
     }
 
     // Автоматическая смена слайдов каждые 5 секунд
-    let slideInterval = setInterval(nextSlide, 5000);
+    let slideInterval = setInterval(nextSlide, 3000);
 
     // Остановка автосмены при наведении мыши
     const slider = document.querySelector('.slider-main');
@@ -172,7 +172,7 @@ function validateEmail(email) {
 
     // Возобновление автосмены при уходе мыши
     slider.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 2000);
     });
 
     // События для стрелок
