@@ -38,7 +38,7 @@
 <meta  name= "msapplication-TileColor"  content= "#ffffff" > 
 <meta  name= "msapplication-TileImage"  content= "icons/ms-icon-144x144.png" > 
 <meta  name= "theme-color"  content= "#ffffff" >
-  <link rel="stylesheet" href="styleIndex.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -92,50 +92,46 @@
 
   <!-- News & Announcements -->
   <section class="news-section fade-in">
+
     <div class="container news-container">
-      <h2>Новости и объявления</h2>
       <div class="news-cards" id="newsCards">
         <!-- Пример карточки новости -->
         <div class="news-card">
-          <div class="date"></div>
-          <h3>Гостевые дома</h3>
-          <p>Хотите отдохнуть в нашей станице Новосвободная и самостоятельно посетить ее окрестности?</p>
-          <!-- <a href="#" class="load-more">Посмотреть</a> -->
+          <h2>Маршруты</h2>
+          <p>На нашем сайте вы найдете редкие и классические маршруты по Горной Адыгее.</p>
+          <p>Сможете скачать карту для самостоятельного путешествия или найти туристического инструктора без посредников.</p>
+          <a href="routes.html" class="load-more">Посмотреть</a>
         </div>
   
         <div class="news-card">
-          <div class="date"></div>
-          <h3>Экскурсии по станице Новосвободная и ее окрестностям</h3>
-          <p>Посетите уникальное скопление памятников неолита-дольменов, пройдитесь по каньону реки Фарс и другим достопримечательностям с нашими гидами.</p>
+          <h2>Авторские туры по Горной Адыгее</h2>
+          <p>Хотите погрузиться в особую атмосферу </p>
+          <p>Отправляйтесь в путешествие по местам силы, откройте для себя творческое вдохновение</p>
           <!-- <a href="#" class="load-more">Посмотреть</a> -->
         </div>
 
         <div class="news-card">
-          <div class="date"></div>
-          <h3>Мастер-классы</h3>
-          <p>Есть мастер-классы по сакральной геометрии, керамике, линогравюре, игре на варганах. </p>
+          <h2>Научиться новому</h2>
+          <p>Есть мастер-классы по сыроделию,  керамике, сакральной геометрии, линогравюре, игре на варганах. </p>
           <!-- <a href="#" class="load-more">Посмотреть</a> -->
         </div>
-  
-
-  
-        <!-- Добавьте больше карточек по аналогии -->
+  <div class="news-card">
+          <h2>Отдых в гостевом доме</h2>
+          <p>Вы можете снять домик в центре станицы или на окраине, где нет соседей.</p>
+          <a href="#" class="load-more">Посмотреть</a>
+        </div>
       </div>
-  
-      <button id="loadMoreNewsBtn" class="load-more">Подробнее</button> 
     </div>
   </section>
-<!-- <section class="main-content container fade-in">
-  <h1>Добро пожаловать в станицу Новосвободная!</h1>
-        <p>Здесь, вдали от городской суеты, собрались люди, которые
-          реализуют уникальные проекты. Часть из них переехала из больших городов, часть живет здесь давно. И каждый занимается своим любимым делом.
-        </p>
-</section> -->
 <!-- Slider / Carousel -->
 <div class="main-content slider fade-in" id="photo">
-  <h2>Живописные места вокруг</h2>
 
   <div class="slider-container">
+    <div class="about-text slider-container-prim">
+    <h2>От классики до эксклюзива - вся Адыгея в одном месте</h2>
+    <p>Мы предлагаем полный спектр туров в горной Адыгее - от
+популярных классических маршрутов к водопадам Руфабго и на плато Лагонаки, до эксклюзивных авторских туров с мастер-классами и
+редкими локациями.</p>
     <!-- Основной слайдер -->
     <div class="slider-main">
       <div class="wrap">
@@ -171,31 +167,34 @@
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <div class="carousel-counter" id="carouselCounter">1 / 5</div>
     </div>
-
+</div>
     <!-- Мини-превью -->
     <div class="slider-thumbnails">
-      <div class="thumbnail" data-index="0">
-        <img src="img/tur/dolmen.png" alt="Дольмены Богатырской поляны">
-        <p>Дольмены Богатырской поляны</p>
-      </div>
-      <div class="thumbnail" data-index="1">
-        <img src="img/tur/chertov_palec.png" alt="Чертов палец над станицей Даховская">
-        <p>Чертов палец</p>
-      </div>
-      <div class="thumbnail" data-index="2">
-        <img src="img/tur/lacrush.png" alt="Водопад реки Лакруш">
-        <p>Водопад Лакруш</p>
-      </div>
-      <div class="thumbnail" data-index="3">
-        <img src="img/tur/groty.png" alt="Гроты у реки Лакруш">
-        <p>Гроты у реки Лакруш</p>
-      </div>
-      <div class="thumbnail" data-index="4">
-        <img src="img/tur/chasovnya.png" alt="Часовня Александра II">
-        <p>Часовня Александра II</p>
-      </div>
+      <h2>Редкие маршруты</h2>
+        <ul class="list_project">
+          <li class="main_aside"><a href="solma.html" class="main_aside_link">р. Фарс и гр. Череп</a></li>
+          <li class="main_aside"><a href="ochnauche.html" class="main_aside_link">Ощнаутуаче</a>
+          </li>
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">«Клады» и «Богатырская поляна»</a>
+          </li>          <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">Скала Галкина</a></li>
+          <li class="main_aside"><a href="comfy-light.html" class="main_aside_link">Часовня Александра II</a></li>
+        </ul>
+<h2>Классика</h2>
+         <ul class="list_project">
+          <li class="main_aside"><a href="solma.html" class="main_aside_link">Водопады Руфабго</a></li>
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Хаджохская теснина</a>
+          </li>
+          <li class="main_aside"><a href="english-with-ally.html" class="main_aside_link">Гузерипль</a>
+          </li>          
+          <li class="main_aside"><a href="house-in-forest.html" class="main_aside_link">Плато Лагонаки</a></li>
+          <li class="main_aside"><a href="comfy-light.html" class="main_aside_link">Экстрим-парк Мишоко</a></li>
+          <li class="main_aside"><a href="dream-to-health.html" class="main_aside_link">г. Тхач</a>
+          <li class="main_aside"><a href="cheeseme.html" class="main_aside_link">г. Оштен</a></li>
+          </li>
+          <li class="main_aside"><a href="gidrolat-moon-ally.html" class="main_aside_link">г. Фишт</a>
+          </li>
+        </ul>
     </div>
   </div>
 </div>
