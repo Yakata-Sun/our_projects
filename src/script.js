@@ -12,62 +12,23 @@ faders.forEach(el => appearOnScroll.observe(el));
 
 // === Табы ===
 
-const TabsModule = (function () {
-  // Приватные переменные
-  const tabButtons = document.querySelectorAll('.catalog_tab');
-  const tabContents = document.querySelectorAll('.catalog_content');
+const tabRoutes = (tabBaseClass, contentBaseClass) => {
+  const tabs = document.querySelectorAll(`.${tabBaseClass}`);
+  const contents = document.querySelectorAll(`.${contentBaseClass}`);
 
-  // Установка начального активного таба
-  function initActiveTab() {
-    const activeTab = document.querySelector('.catalog_tab_active');
-    if (activeTab) {
-      const target = activeTab.dataset.tab;
-      const content = document.querySelector(`[data-tab-id="${target}"]`);
-      if (content) {
-        content.classList.add('catalog_content_active');
-      }
-    }
-  }
-
-  // Переключение табов
-  function switchTab(event) {
-    const clickedTab = event.currentTarget;
-    const target = clickedTab.dataset.tab;
-
-    // Удаляем классы у всех табов и контента
-    tabButtons.forEach(tab => tab.classList.remove('catalog_tab_active'));
-    tabContents.forEach(content => content.classList.remove('catalog_content_active'));
-
-    // Добавляем классы к выбранному табу и контенту
-    clickedTab.classList.add('catalog_tab_active');
-    const targetContent = document.querySelector(`[data-tab-id="${target}"]`);
-    if (targetContent) {
-      targetContent.classList.add('catalog_content_active');
-    }
-  }
-
-  // Назначаем обработчики событий
-  function bindEvents() {
-    tabButtons.forEach(tab => {
-      tab.addEventListener('click', switchTab);
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Удаляем активные классы у всех
+      tabs.forEach(t => t.classList.remove(`${tabBaseClass}_active`));
+      contents.forEach(c => c.classList.remove(`${contentBaseClass}_active`));
+      
+      // Добавляем активный класс текущему
+      tab.classList.add(`${tabBaseClass}_active`);
+      contents[index].classList.add(`${contentBaseClass}_active`);
     });
-  }
-
-  // Инициализация модуля
-  function init() {
-    initActiveTab();
-    bindEvents();
-  }
-
-  return {
-    init: init
-  };
-})();
-
-// Запуск модуля после загрузки DOM
-document.addEventListener('DOMContentLoaded', () => {
-  TabsModule.init();
-});
+  });
+};
+ tabRoutes('catalog_tab', 'catalog_content');
 
 // subscribe
 document.getElementById('subscribeForm').addEventListener('submit', function (event) {

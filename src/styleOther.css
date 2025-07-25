@@ -760,3 +760,19 @@ h2 {
   max-height: 80vh;
   margin: 0 auto;
 }
+.catalog_item {
+  background: var(--card-background);
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-base);
+}
+
+.catalog_item:hover {
+  transform: translateY(-3px); /* Немного подъема при наведении */
+}
+

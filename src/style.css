@@ -145,6 +145,7 @@ img {
 
 /* ====== 4. Секция "О нас" ====== */
 .about-section {
+  margin-top: calc(1.25rem + 29px);
   padding: 4rem 0;
   background-color: var(--card-background);
   background-image: url('img/glav_head.png');
@@ -161,12 +162,12 @@ img {
 }
 
 .about-text {
+  max-width: 800px;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  padding: 4rem 3rem;
+  padding: 2rem 3rem;
   text-align: left;
   background-color: rgba(18, 69, 89, 0.5);
-  border-radius: var(--border-radius-xl);
 }
 
 .about-text h1 {
@@ -206,7 +207,6 @@ img {
   justify-content: space-between;
   background-color: var(--card-background);
   padding: 2em;
-  border-radius: var(--border-radius-lg);
   box-shadow: 0 4px 10px var(--shadow-color);
   transition: transform var(--transition-base);
 }
@@ -353,7 +353,6 @@ img {
 .catalog_item {
   background: var(--card-background);
   padding: 1.5rem;
-  border-radius: var(--border-radius-lg);
   box-shadow: 0 4px 10px var(--shadow-color);
   display: flex;
   flex-direction: column;
@@ -494,7 +493,7 @@ img {
   padding: 1rem;
   margin: 0;
   background-color: var(--card-background);
-  border-radius: var(--border-radius-lg);
+
   box-shadow: 0 2px 8px var(--shadow-color);
 }
 
@@ -603,6 +602,7 @@ img {
 
 .arrow-left {
    background-image: url("icons/arrowLeft.ico");
+   
 }
 
 .prev:hover .arrow-left,
@@ -676,11 +676,9 @@ img {
 }
 
 .footer-flex iframe {
-  border-radius: 20px;
   align-self: flex-end; /* Выравнивание iframe по низу */
   margin-top: auto; /* Помогает при выравнивании flexbox */
   width: 100%;
-  max-width: 400px;
   height: 300px;
 }
 
