@@ -20,10 +20,28 @@ window.addEventListener('DOMContentLoaded', function () {
 };
   tabRoutes('tabRoutes', 'tabRoutes_content');
 /*   tabRoutes('catalog_tab', 'catalog_content'); */
+function calcScroll() {
+        let div = document.createElement('div');
+
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+
+        return scrollWidth;
+    }
+
 const bigImg = (containerSelector) => {
     const contImgs = document.querySelector(containerSelector),
       popup = document.createElement('div'),
-      big = document.createElement('img');
+      big = document.createElement('img'),
+      scroll = calcScroll();
+
+      console.log(`${scroll}px`);
 
     popup.classList.add('popup');
     popup.style.cssText = "display: none;";
@@ -42,17 +60,19 @@ console.log(target);
   if (!link) return;
 
   const path = link.getAttribute('href');
-  console.log(path); // Теперь путь будет корректным
   big.setAttribute('src', path);
   console.log(big);
   popup.style.display = 'flex';
+  document.body.style.marginRight = `${scroll}px`; // Устанавливаем margin-right для предотвращения перекрытия содержимого на странице
   document.body.style.overflow = 'hidden';
+  console.log(document.body.style);
 });
     // Закрытие по клику вне изображения
     popup.addEventListener('click', () => {
       popup.style.display = 'none';
       big.src = '';
       document.body.style.overflow = '';
+      document.body.style.marginRight = 0;
     });
 
   };
