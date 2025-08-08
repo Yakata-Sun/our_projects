@@ -10,11 +10,13 @@
   --button-hover: #226688;
   --button-accent: #4caf50;
   --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-big: 5px 14px 8px var(--shadow-color);
   --transition-base: 0.4s ease;
   --border-radius: 6px;
   --border-radius-lg: 10px;
   --border-radius-xl: 12px;
   --border-radius-circle: 50%;
+  --button-accent: #4caf50;
 }
 /* ====== 2. Базовые стили ====== */
 * {
@@ -56,13 +58,13 @@ h1, h4 {
 }
 
 p {
+  text-indent: 16px;
   line-height: 1.6;
+  hyphens: auto; 
 }
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .accent {
@@ -75,8 +77,8 @@ img {
   padding: 2rem 1rem;
 }
 
-.fade-in {
-  animation: fadin 1.5s;
+.fadein {
+  animation: fadin 1.5s 1 ease-out forwards;
 }
 @keyframes fadin {
   from {opacity: 0; transform: translateY(30px);}
@@ -133,16 +135,16 @@ img {
 }
 
 .menu-bar_link:hover:after {
-  width: 60%;
+  width: 80%;
 }
 
 .menu-bar_link_active:after {
-  width: 60%;
+  width: 80%;
 }
 
 @media (max-width: 888px) {
   .navbar {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0;}
   .menu-bar_link {
     font-weight: 500;
     font-size: 20px;
@@ -151,7 +153,6 @@ img {
   .menu-bar_link:after {
     height: 1px;
   }
-}
 }
 .carousel {
   display: flex;
@@ -163,16 +164,6 @@ img {
   width: 100%;
   max-width: 100%;
   margin: auto;
-}
-/* Fade-in Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
   /* ====== 4. Секция "О нас" ====== */
@@ -218,6 +209,28 @@ img {
   font-size: 1.2rem;
   line-height: 1.6;
 }
+
+.cont {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.cont a {
+  display: block;
+}
+.btn {
+    background-color: var(--button-accent);
+    color: var(--text-color);
+    padding: 1rem;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: var(--shadow-big);
+    transition: background-color var(--transition-base);
+    font-size: 1rem;
+}
 /* Средние экраны (планшеты) */
 @media (max-width: 990px) {
   .about-text {
@@ -252,13 +265,14 @@ img {
   margin-top: 2rem;
   padding: 1.5rem;
 }
+
 .project-keis {
   margin-bottom: 3rem;
   background: var(--card-background);
   padding: 1.5rem;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
-  box-shadow: 0 4px 10px var(--shadow-color);
+  box-shadow: var(--shadow-big);
 }
 .project_promo {
   text-align: center;
@@ -278,7 +292,7 @@ img {
   display: flex;
   gap: 20px;
   -ms-flex-line-pack: start;
-  align-content: flex-start
+  align-content: flex-start;
 }
 .project_item_description_image_project {
   display: -webkit-box;
@@ -299,9 +313,9 @@ img {
 }
 .project_item_description_image_project img {
   display: block;
-  border-radius: 20px/15px;
-  width: 300px;
-  margin-bottom: 10px
+  width: 250px;
+  margin-bottom: 10px;
+
 }
 .project_item_description_text {
   -ms-flex-item-align: center;
@@ -315,16 +329,20 @@ img {
 }
 .project_desc img {
   display: block;
-  border-radius: 20px/15px;
   min-width: 50%;
   margin: 20px;
   -ms-flex-item-align: center;
-  align-self: center
+  align-self: center;
+  box-shadow: var(--shadow-big);
 }
 .project_desc_text {
   -ms-flex-item-align: center;
   align-self: center;
   padding: 10px
+}
+
+.geo{
+  align-self: flex-start;
 }
 .project_desc ul li {
   list-style: none
@@ -338,7 +356,6 @@ img {
   width: 68px;
   margin: 10px;
   margin-left: 0;
-  box-shadow: 0 4px 5px var(--shadow-color);
 }
 .connect {
   display: -webkit-box;
@@ -362,6 +379,9 @@ img {
     margin: 10px auto;
     padding: 5px;
   }
+  .project .tabs {
+    justify-content: center;
+  }
   .container-projects {
     margin: auto 20px; /* Уменьшаем горизонтальные отступы */
     flex-wrap: wrap; /* Разрешаем перенос элементов, если нужно */
@@ -379,11 +399,13 @@ img {
     align-items: center;
     gap: 5px
   }
+ 
   .project_item_description img {
-    width: 200px;
+    width: 250px;
     -ms-flex-item-align: center;
     align-self: center
   }
+
   .project_desc {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -394,9 +416,7 @@ img {
     align-items: center;
     gap: 5px
   }
-  .project_desc img {
-    width: 100%
-  }
+
   .connect {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -470,7 +490,7 @@ img {
   background: var(--card-background);
   padding: 1.5rem;
   -webkit-box-shadow: 0 4px 10px var(--shadow-color);
-  box-shadow: 0 4px 10px var(--shadow-color);
+  box-shadow: var(--shadow-big);
   min-width: 300px;
 }
 .hamburger {
@@ -564,6 +584,7 @@ img {
   gap: 2rem 1rem;
   padding: 1rem;
   align-items:stretch;
+  box-shadow: var(--shadow-big);
 }
 
 .footer-flex h2 {
@@ -586,6 +607,7 @@ iframe {
   margin: 0 auto; /* Помогает при выравнивании flexbox */
   width: 100%;
   height: 400px;
+  box-shadow: var(--shadow-big);
 }
 
 
@@ -648,7 +670,7 @@ iframe {
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
 .galleryLite a {
@@ -659,7 +681,12 @@ iframe {
 .galleryLite_item {
   width: 100%;
   max-width: 300px;
+  
 
+}
+
+.galleryLite_item img{
+  box-shadow: var(--shadow-big);
 }
 
 /* Gallery */
@@ -811,7 +838,24 @@ iframe {
   text-align: left
 }
 
+@media (max-width: 1100px) {
+  .tabs {
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+}
 
+@media (max-width: 768px) {
+
+.tabRoutes {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+  
+}
 /* Popup */
 .popup {  
   display: none;
@@ -826,8 +870,8 @@ iframe {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .popup img {
-  max-width: 40rem;
-  max-height: 80vh;
+  max-width: 100vh;
+  max-height: 100vh;
   margin: 0 auto;
 }
 .catalog_item {
@@ -838,8 +882,8 @@ iframe {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
   transition: transform var(--transition-base);
+  box-shadow: var(--shadow-big);
 }
 
 .catalog_item:hover {
@@ -861,7 +905,7 @@ iframe {
     gap: 1rem;
   }
 .flexUl {
-  min-height: fit-content;
+  height: 100%;
 }
   .footer-flex > div {
     min-width: auto; /* Позволить колонкам быть меньше */
@@ -1044,6 +1088,7 @@ iframe {
     display: block; /* Сброс inline-block для центрирования списка */
     margin: 0 auto; /* Центрирование списка */
   }
+
 
   .footer-flex iframe {
     width: 100%; /* Карта на всю ширину колонки */

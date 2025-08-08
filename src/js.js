@@ -19,6 +19,8 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 };
   tabRoutes('tabRoutes', 'tabRoutes_content');
+
+  
 /*   tabRoutes('catalog_tab', 'catalog_content'); */
 function calcScroll() {
         let div = document.createElement('div');
