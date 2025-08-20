@@ -394,7 +394,8 @@ img {
 .massage,
 .master_class,
 .plants,
-.repetitor {
+.repetitor,
+.vargan {
   width: 100%;
   height: 200px;
   margin-bottom: 1rem;
@@ -439,6 +440,13 @@ img {
 .massage { background-image: url("img/tovary/massage.png"); }
 .repetitor { background-image: url("img/tovary/repetitor.png"); }
 .master_class { background-image: url("img/tovary/master_klass.png"); }
+.vargan {
+  background: url("img/projects/oly-vargan/catcher1.jpg") center center/cover no-repeat
+}
+
+.vargan:hover {
+  background: url("img/projects/oly-vargan/vargan1.jpg") center center/cover no-repeat
+}
 
 
 .catalog_item h3 {
