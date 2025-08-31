@@ -10,7 +10,7 @@
 <body>
   <header id="up">
   </header>
-  <nav class="navbar fade-in">
+  <nav class="navbar fadein">
     <ul class="menu-bar">
       <li class="menu-bar_list"><a href="index.html" class="menu-bar_link">Главная</a></li>
       <li class="menu-bar_list"><a href="index.html#products" class="menu-bar_link">Товары</a></li>
@@ -20,7 +20,7 @@
             </ul>
   </nav>
    <!-- About Section -->
-  <section class="about-section rout fade-in">
+  <section class="about-section rout fadein">
     <div class="container about-container">
       <div class="about-text">
         <div class="head_other">
@@ -118,6 +118,51 @@
               <a href="https://vk.com/eco_products_ot_domik_v_lesy"><img src="icons/vk.ico" alt="домик в лесу в контакте" class="icons"></a>
               <a href="https://t.me/domik_v_lecy"><img src="icons/telegram.ico" alt="Домик в лесу в телеграмм" class="icons"></a>  
           </div>
+           <section>
+        <h2 class="accent">Немного моих фотографий</h2>
+
+        <div class="main-content fadein" id="photo">
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/blue_earrings.png" alt="авторская бижутерия" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/blue_flower_earrings.png" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/ceramic_bracelet.png" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/ceramic_pendant.png" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/crimson_earrings.png" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/blue_earrings.png" alt="оригинальные ловцы снов" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img src="img/projects/house_in_forest/blue_flower_earrings.png"  alt="варганы мастера Глазырина в Адыгее" class="gallery-img">
+              </div>
+               <div class="gallery-item">
+              <img src="img/projects/house_in_forest/red_pendant.png" class="gallery-img">
+              </div>
+               <div class="gallery-item">
+              <img src="img/projects/house_in_forest/set_cosmetics.png" alt="авторский тур в Адыгее" class="gallery-img">
+              </div>
+               <div class="gallery-item">
+              <img src="img/projects/house_in_forest/set_soap.png"   alt="женский ретрит в Адыгее и Краснодарском крае" class="gallery-img">
+              </div>
+               <div class="gallery-item">
+              <img src="img/projects/house_in_forest/vinegar.png"   alt="варганнные круги в Адыгее и Краснодарском крае" class="gallery-img">
+              </div>
+               <div class="gallery-item">
+              <img src="img/projects/house_in_forest/herb_tea.png" class="gallery-img">
+              </div>
+          </div>
+        </div>
+          
+      </section>
     </article>
   </main>
   <!-- Footer -->
@@ -191,19 +236,6 @@
 
   <!-- Scroll to Top -->
   <a href="#up" class="pageUp"><b>↑</b></a>
-  <script>
-  const faders = document.querySelectorAll('.fade-in');
-    const appearOnScroll = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    
-    faders.forEach(el => appearOnScroll.observe(el));
- 
-    </script>
 
 </body>
 </html>
