@@ -292,33 +292,42 @@ img {
 }
 
 
-#aboutHost {
+#aboutHost,
+#aboutHouse {
   display: none;
 }
-#aboutHost span {
+#aboutHost span,
+#aboutHouse span {
   display: inline-block;
   width: 150px;
 
 }
 
   
-.project_item .aboutHostTo {
+.project_item .aboutHostTo,
+.project_item .aboutHouseTo {
     position: relative;
     display: none;
     top: 20px;
-    height: 100%;
     overflow-y: auto;
     z-index: 1000;
     transition: left 0.5s ease;
-    margin: 0;
+    margin-bottom: 1.5rem;
     padding: 1.5rem;
+    background-color: var(--background-main);
     box-shadow: inset 0 -4px 10px 4px var(--shadow-color);
   }
 
+
+
   #aboutHost:checked ~ .aboutHostTo {
     display:block;
-  }
-
+    animation: fadin 1.5s 1 ease-out forwards;
+}
+ #aboutHouse:checked ~ .aboutHouseTo {
+    display:block;
+    animation: fadin 1.5s 1 ease-out forwards;
+}
 
 
 .project_item_description {

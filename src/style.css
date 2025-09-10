@@ -376,6 +376,10 @@ img {
   transition: transform var(--transition-base);
 }
 
+.catalog_item img {
+  width: 350px;
+}
+
 .catalog_item:hover {
   transform: translateY(-3px); /* Немного подъема при наведении */
 }
