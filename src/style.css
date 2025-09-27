@@ -249,21 +249,27 @@ img {
 }
 
 .button,
-.load-more,
+.btn,
 #ok {
   background: var(--button-bg);
   color: var(--text-color);
 }
 
+.load-more{
+  background: var(--button-accent);
+  color: var(--text-color);
+}
+
 .load-more:hover,
 .button:hover,
+.btn:hover,
 #ok:hover {
   background: var(--button-hover);
   transform: translateY(-2px);
 }
 
 .btn {
-    background-color: var(--button-accent);
+    background-color: var(--button-bg);
     color: var(--text-color);
     padding: 10px 20px;
     border: none;
@@ -300,7 +306,7 @@ img {
 }
 
 .btn-gradient {
-  background: var(--accent-gradient);
+  background: var(--button-accent);
   color: #07313f;
 }
 
@@ -704,8 +710,8 @@ iframe {
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  background: var(--accent-gradient);
-  color: #07313f;
+  background: var(--button-hover);
+  color: var(--button-accent);
   width: 50px;
   height: 50px;
   border-radius: var(--border-radius-circle);
@@ -721,7 +727,8 @@ iframe {
 
 .pageUp:hover {
   transform: scale(1.1);
-  background: linear-gradient(to right, #ffe35e, var(--accent-color));
+  background: var(--button-hover);
+  color: white;
 }
 
 /* ====== 12. Модальные окна ====== */
@@ -793,7 +800,7 @@ iframe {
 }
 
 button[type="submit"] {
-  background-color: #4caf50;
+  background-color: var(--button-bg);
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -806,7 +813,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: var(--button-hover);
 }
 
 #confirmationModal .modal-content,

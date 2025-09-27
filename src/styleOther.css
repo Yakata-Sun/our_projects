@@ -179,7 +179,7 @@ img {
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -223,17 +223,71 @@ img {
 .cont a {
   display: block;
 }
+
+/* Load More Button */
+.button,
+.load-more,
+.subscribe-form button,
+#ok {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none; /* Для ссылок-кнопок */
+  transition: background var(--transition-base), transform var(--transition-base), opacity var(--transition-base);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  font-family: inherit; /* Наследование шрифта от body */
+  font-size: 1rem; /* Единый размер шрифта */
+}
+
+.button,
+.btn,
+#ok {
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+.load-more{
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+.load-more:hover,
+.button:hover,
+.btn:hover,
+#ok:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.load-more,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 2rem auto 0;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+   box-shadow: var(--shadow-big);
+    font-size: 1rem;
+}
+.load-more:hover {
+  background: var(--button-hover);
+}
+
 .btn {
     background-color: var(--button-accent);
-    color: var(--text-color);
-    padding: 1rem;
-    border: none;
     width: fit-content;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: var(--shadow-big);
-    transition: background-color var(--transition-base);
-    font-size: 1rem;
 }
 /* Средние экраны (планшеты) */
 @media (max-width: 990px) {
@@ -632,22 +686,7 @@ img {
     padding: 15px 0;
   }
 }
-/* Load More Button */
-.load-more {
-  display: block;
-  margin: 2rem auto 0;
-  padding: 0.8rem 1.5rem;
-  background: var(--button-bg);
-  box-shadow: 0 4px 10px var(--shadow-color);
-  color: var(--text-color);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.load-more:hover {
-  background: var(--button-hover);
-}
+
 /* ====== 10. Футер ====== */
 .footer-flex {
   display: flex;
@@ -970,6 +1009,10 @@ iframe {
   transform: translateY(-3px); /* Немного подъема при наведении */
 }
 
+.catalog_item img{
+  max-width:350px;
+}
+
 /* ====== 13. Адаптивность (Media Queries) ====== */
 
 @media (max-width: 1200px) {
@@ -1225,5 +1268,98 @@ iframe {
   }
 }
 
+
+/* ====== 12. Модальные окна ====== */
+.modal,
+#orderPhone,
+#thanks {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  color: #0b2c37;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: modalopen 0.4s;
+}
+
+@keyframes modalopen {
+  from {opacity: 0; transform: translateY(-60px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-content h2 {
+  color: #0b2c37;
+  margin-top: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #0b2c37;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #0b2c37;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box; /* Убедиться, что padding входит в ширину */
+}
+
+button[type="submit"] {
+  background-color: var(--button-bg);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-base);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--button-hover);
+}
+
+#confirmationModal .modal-content,
+#thanks .modal-content {
+  text-align: center;
+  padding: 30px;
+}
 
  
