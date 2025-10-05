@@ -19,9 +19,10 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 };
   tabRoutes('tabRoutes', 'tabRoutes_content');
-
   
 /*   tabRoutes('catalog_tab', 'catalog_content'); */
+
+
 function calcScroll() {
         let div = document.createElement('div');
 
@@ -36,6 +37,22 @@ function calcScroll() {
 
         return scrollWidth;
     }
+
+/* twoLinks*/
+     const twoLinks = () => {
+    const cont = document.querySelector(".around"),
+    leftScreen = document.querySelector(".horse"),
+    rightScreen = document.querySelector(".onFoot");
+
+    leftScreen.addEventListener('mouseenter', () => cont.classList.add('horse-hover'));
+    leftScreen.addEventListener('mouseleave', () => cont.classList.remove('horse-hover'));
+
+    rightScreen.addEventListener('mouseenter', () => cont.classList.add('onfoot-hover'));
+    rightScreen.addEventListener('mouseleave', () => cont.classList.remove('onfoot-hover'));
+
+  };
+
+  twoLinks();
 
 const bigImg = (containerSelector) => {
     const contImgs = document.querySelector(containerSelector),

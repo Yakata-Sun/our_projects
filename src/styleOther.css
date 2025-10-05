@@ -4,7 +4,6 @@
   --text-color: #f0f0f0;
   --accent-color: #c78030;
   --accent-gradient: linear-gradient(to right, var(--accent-color), #FEE97D);
-  --accent-hover: #FEE97D;
   --card-background: #124559;
   --button-bg: #1a4e66;
   --button-hover: #226688;
@@ -13,10 +12,9 @@
   --shadow-big: 5px 14px 8px var(--shadow-color);
   --transition-base: 0.4s ease;
   --border-radius: 6px;
-  --border-radius-lg: 10px;
-  --border-radius-xl: 12px;
   --border-radius-circle: 50%;
-  --button-accent: #4caf50;
+  --width-focus: 75%;
+  --width-other: 25%;
 }
 /* ====== 2. Базовые стили ====== */
 * {
@@ -228,6 +226,7 @@ img {
 .button,
 .load-more,
 .subscribe-form button,
+.accent-btn,
 #ok {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
@@ -269,7 +268,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;  
-  margin: 2rem auto 0;
+  margin: 1lh auto 0;
   padding: 0.8rem 1.5rem;
   box-shadow: 0 4px 10px var(--shadow-color);
   color: var(--text-color);
@@ -284,11 +283,31 @@ img {
 .load-more:hover {
   background: var(--button-hover);
 }
-
+.accent-btn {
+  background-color: var(--button-accent);
+}
 .btn {
     background-color: var(--button-accent);
     width: fit-content;
 }
+
+/* кнопки карточки маршрутов */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.btns a .load-more{
+  display: block;
+  min-width: fit-content;
+}
+
+@media  (max-width: 990px)  {
+  .btns {
+    flex-direction: column;
+  }
+}
+
 /* Средние экраны (планшеты) */
 @media (max-width: 990px) {
   .about-text {
@@ -347,11 +366,13 @@ img {
 
 
 #aboutHost,
-#aboutHouse {
+#aboutHouse,
+#aboutHouseGul {
   display: none;
 }
 #aboutHost span,
-#aboutHouse span {
+#aboutHouse span,
+#aboutHouseGul span {
   display: inline-block;
   width: 150px;
 
@@ -359,7 +380,8 @@ img {
 
   
 .project_item .aboutHostTo,
-.project_item .aboutHouseTo {
+.project_item .aboutHouseTo,
+.project_item .aboutHouseGulTo {
     position: relative;
     display: none;
     top: 20px;
@@ -379,6 +401,10 @@ img {
     animation: fadin 1.5s 1 ease-out forwards;
 }
  #aboutHouse:checked ~ .aboutHouseTo {
+    display:block;
+    animation: fadin 1.5s 1 ease-out forwards;
+}
+ #aboutHouseGul:checked ~ .aboutHouseGulTo {
     display:block;
     animation: fadin 1.5s 1 ease-out forwards;
 }
@@ -1362,4 +1388,47 @@ button[type="submit"]:hover {
   padding: 30px;
 }
 
- 
+.around {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+
+/* половинки для маршрутов - конные и пешие */
+.offer {
+  height: 45vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  color: #fff;
+  box-sizing: border-box;
+  transition: .4s ease;
+}
+
+.horse{
+  background:  linear-gradient(rgba(125, 154, 172, 0.5), rgba(77, 81, 83, 0.9)),
+  url("./img/routes/horses/horseHead.jpg") center/cover no-repeat;
+}
+
+.horse-hover .horse {
+  width: var(--width-focus);
+  background:  linear-gradient(rgba(125, 154, 172, 0.2), rgba(77, 81, 83, 0.4)),
+  url("./img/routes/horses/horseHead.jpg") top/cover no-repeat;
+}
+
+.horse-hover .onFoot {
+  width: var(--width-other);
+}
+
+.onfoot-hover .onFoot{
+  width: var(--width-focus);
+}
+
+.onfoot-hover .horse{
+  width: var(--width-other);
+  background:  linear-gradient(rgba(125, 154, 172, 0.4), rgba(77, 81, 83, 0.7)),
+  url("./img/routes/horses/horseHead.jpg") top/cover no-repeat;
+}
