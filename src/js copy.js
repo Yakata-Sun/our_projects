@@ -1,24 +1,29 @@
 window.addEventListener('DOMContentLoaded', function () {
   "use strict";
 
-/* twoLinks*/
-  const twoLinks = () => {
-    const cont = document.querySelector(".around"),
-    leftScreen = document.querySelector(".horse"),
-    rightScreen = document.querySelector(".onFoot");
 
-    leftScreen.addEventListener('mouseenter', () => cont.classList.add('horse-hover'));
-    leftScreen.addEventListener('mouseleave', () => cont.classList.remove('horse-hover'));
+  const tabRoutes = (tabBaseClass, contentBaseClass) => {
+  const tabs = document.querySelectorAll(`.${tabBaseClass}`);
+  const contents = document.querySelectorAll(`.${contentBaseClass}`);
 
-    rightScreen.addEventListener('mouseenter', () => cont.classList.add('onfoot-hover'));
-    rightScreen.addEventListener('mouseleave', () => cont.classList.remove('onfoot-hover'));
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Удаляем активные классы у всех
+      tabs.forEach(t => t.classList.remove(`${tabBaseClass}_active`));
+      contents.forEach(c => c.classList.remove(`${contentBaseClass}_active`));
+      
+      // Добавляем активный класс текущему
+      tab.classList.add(`${tabBaseClass}_active`);
+      contents[index].classList.add(`${contentBaseClass}_active`);
+    });
+  });
+};
+  tabRoutes('tabRoutes', 'tabRoutes_content');
+  
+/*   tabRoutes('catalog_tab', 'catalog_content'); */
 
-  };
 
-  twoLinks();
-
-/* ширина скрола */
-  function calcScroll() {
+function calcScroll() {
         let div = document.createElement('div');
 
         div.style.width = '50px';
@@ -33,7 +38,22 @@ window.addEventListener('DOMContentLoaded', function () {
         return scrollWidth;
     }
 
-/* большие картинки как модал */
+/* twoLinks*/
+     const twoLinks = () => {
+    const cont = document.querySelector(".around"),
+    leftScreen = document.querySelector(".horse"),
+    rightScreen = document.querySelector(".onFoot");
+
+    leftScreen.addEventListener('mouseenter', () => cont.classList.add('horse-hover'));
+    leftScreen.addEventListener('mouseleave', () => cont.classList.remove('horse-hover'));
+
+    rightScreen.addEventListener('mouseenter', () => cont.classList.add('onfoot-hover'));
+    rightScreen.addEventListener('mouseleave', () => cont.classList.remove('onfoot-hover'));
+
+  };
+
+  twoLinks();
+
 const bigImg = (containerSelector) => {
     const contImgs = document.querySelector(containerSelector),
       popup = document.createElement('div'),
@@ -77,7 +97,4 @@ console.log(target);
   };
 
   bigImg('.galleryLite');
-
-/*  отправка заявки  */
-
 });

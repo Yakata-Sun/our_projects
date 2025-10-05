@@ -13,8 +13,8 @@
   --transition-base: 0.4s ease;
   --border-radius: 6px;
   --border-radius-circle: 50%;
-  --width-focus: 75%;
-  --width-other: 25%;
+  --width-focus: 67%;
+  --width-other: 33%;
 }
 /* ====== 2. Базовые стили ====== */
 * {
@@ -302,12 +302,6 @@ img {
   min-width: fit-content;
 }
 
-@media  (max-width: 990px)  {
-  .btns {
-    flex-direction: column;
-  }
-}
-
 /* Средние экраны (планшеты) */
 @media (max-width: 990px) {
   .about-text {
@@ -564,7 +558,7 @@ img {
 #toggle {
   display: none;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
   .container-projects {
     flex-direction: column;
     padding: 10px;
@@ -1392,6 +1386,7 @@ button[type="submit"]:hover {
   position: relative;
   display: flex;
   width: 100%;
+  margin: 1rem 0;
 }
 
 
@@ -1401,11 +1396,19 @@ button[type="submit"]:hover {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 2rem;
   color: #fff;
   box-sizing: border-box;
   transition: .4s ease;
+}
+.about-offer {
+  background-color: rgba(18, 69, 89, 0.5);
+  width: 70%;
+  padding: 1rem;
+}
+.offer h2 {
+  text-align: left;
 }
 
 .horse{
@@ -1413,22 +1416,58 @@ button[type="submit"]:hover {
   url("./img/routes/horses/horseHead.jpg") center/cover no-repeat;
 }
 
+.onFoot {
+   background:  linear-gradient(rgba(125, 154, 172, 0.5), rgba(77, 81, 83, 0.9)),
+  url("./img/routes/horses/peshkom.jpg") center/cover no-repeat;
+}
+
 .horse-hover .horse {
   width: var(--width-focus);
-  background:  linear-gradient(rgba(125, 154, 172, 0.2), rgba(77, 81, 83, 0.4)),
+  background:  linear-gradient(rgba(125, 154, 172, 0.15), rgba(77, 81, 83, 0.3)),
   url("./img/routes/horses/horseHead.jpg") top/cover no-repeat;
 }
 
 .horse-hover .onFoot {
   width: var(--width-other);
+  background:  linear-gradient(rgba(125, 154, 172, 0.4), rgba(77, 81, 83, 0.7)),
+  url("./img/routes/horses/peshkom.jpg") top/cover no-repeat;
 }
 
 .onfoot-hover .onFoot{
   width: var(--width-focus);
+   background:  linear-gradient(rgba(125, 154, 172, 0.15), rgba(77, 81, 83, 0.3)),
+  url("./img/routes/horses/peshkom.jpg") center/cover no-repeat;
 }
 
 .onfoot-hover .horse{
   width: var(--width-other);
   background:  linear-gradient(rgba(125, 154, 172, 0.4), rgba(77, 81, 83, 0.7)),
-  url("./img/routes/horses/horseHead.jpg") top/cover no-repeat;
+  url("./img/routes/horses/horseHead.jpg") center/cover no-repeat;
+}
+
+.onfoot-hover .horse .about-offer {
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .about-offer {
+    width: 100%
+  }
+}
+
+@media (max-width: 998px) {
+  .around {
+    flex-direction: column;
+  }
+  .offer {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  .onfoot-hover .onFoot,
+  .horse-hover .horse,
+  .onfoot-hover .horse,
+  .horse-hover .onFoot {
+    width: 100%;
+  }
 }
