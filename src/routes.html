@@ -66,8 +66,8 @@
       <div class="around">
         <div class="offer horse">
           <div class="about-offer">
-          <h2>Конные прогулки</h2>
-          <p>Мы предлагаем экскурсии на лошадях для семей и небольших компаний по редким маршрутам в горной Адыгее</p>
+            <h2>Конные прогулки</h2>
+            <p>Мы предлагаем экскурсии на лошадях для семей и небольших компаний по редким маршрутам в горной Адыгее</p>
           </div>
           <div class="btns">
             <a href="#" class="load-more">Смотреть цены</a>
@@ -77,9 +77,9 @@
 
         <div class="offer onFoot">
           <div class="about-offer">
-          <h2>Пешие туры</h2>
-          <p>Вас ждут верховья горных рек, пещеры, гроты, водопады.
-          Исторические памятники разных эпох от неолита до нашей эры.</p>
+            <h2>Пешие туры</h2>
+            <p>Вас ждут верховья горных рек, пещеры, гроты, водопады.
+              Исторические памятники разных эпох от неолита до нашей эры.</p>
           </div>
           <div class="btns">
             <a href="#" class="load-more">Смотреть цены</a>
@@ -97,6 +97,9 @@
       <div class="tabRoutes_content_active">
         <div class="catalog_item">
           <img src="img/routes/och/lacrush6.png" alt="ощнаутуаче">
+                    <div class="route-sticker">
+            <span class="sticker sticker-popular">Популярный</span>
+          </div>
           <h2>Природно-архитектурный комплекс<br>Ощнаутуаче</h2>
           <p>Включает в себя потрясающий своей красотой миниатюрный водопад в глубоком каньоне реки Лакруш и пещеру
             Будкова.</p>
@@ -107,32 +110,57 @@
         </div>
         <div class="catalog_item">
           <img src="img/routes/chasovny/chasovny.png">
+                    <div class="route-sticker">
+            <span class="sticker sticker-popular">Популярный</span>
+          </div>
           <h2>Часовня Александра II</h2>
           <p>Развалины часовни второй половины 19 века, построенной в честь встречи русского царя и черкесской знати.
           </p>
           <p>Именно эта встреча стала важным символическим шагом к завершению Кавказской войны. </p>
-          <a href="chasovny.html" class="load-more">Посмотреть</a>
+          <div class='btns'>
+            <a href="chasovny.html" class="load-more">Подробнее</a>
+            <a href="#" class="load-more accent-btn">Заказать</a>
+          </div>
         </div>
         <div class="catalog_item">
           <img src="img/routes/bogatyr/bogatyr.png">
+                    <div class="route-sticker">
+            <span class="sticker sticker-popular">Популярный</span>
+          </div>
           <h2>Мегалиты урочища <br>«Богатырская поляна»</h2>
           <p>Рядом со станицей Новосвободная находится крупнейшее скопление памятников неолита - дольменов.</p>
           <p>Возраст этих дольменов достигает 6000 лет.</p>
-          <a href="bogatyrka.html" class="load-more">Посмотреть</a>
+          <div class='btns'>
+            <a href="bogatyrka.html" class="load-more">Подробнее</a>
+            <a href="#" class="load-more accent-btn">Заказать</a>
+          </div>
         </div>
         <div class="catalog_item">
           <img src="img/routes/klady/klady.png">
+          <div class="route-sticker">
+            <span class="sticker sticker-popular">Популярный</span>
+          </div>
           <h2>Курганно-мегалитический могильник <br>«Клады»</h2>
           <p>Рядом со станицей Новосвободная находится крупнейшее скопление памятников неолита - дольменов.</p>
           <p>Возраст этих дольменов достигает 6000 лет.</p>
-          <a href="klady.html" class="load-more">Посмотреть</a>
+          <div class='btns'>
+            <a href="klady.html" class="load-more">Подробнее</a>
+            <a href="#" class="load-more accent-btn">Заказать</a>
+          </div>
         </div>
         <div class="catalog_item">
-          <img src="img/routes/fars/cherep1.jpg">
+          <img src="img/routes/fars/cherep3.jpg">
+          <div class="route-sticker">
+            <span class="sticker sticker-eco">Пеший</span>
+          </div>
           <h3>Верховья реки Фарс</h3>
           <p>Здесь, вдали от популярных туристических маршрутов спряталась вереница живописных водопадов, гротов и
             пещер.</p>
-          <a href="cherep.html" class="load-more">Посмотреть</a>
+          <div class='btns'>
+            <a href="cherep.html" class="load-more">Подробнее</a>
+            <a href="#" class="load-more accent-btn">Заказать</a>
+          </div>
+
 
 
         </div>
@@ -212,7 +240,7 @@
   <!-- Scroll to Top -->
   <a href="#up" class="pageUp"><b>↑</b></a>
 
-<!-- modal-->
+  <!-- modal-->
   <div class="modal" id="orderPhone">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -220,14 +248,14 @@
       <p>Оставьте ваши контакты и мы свяжемся с вами</p>
       <form id="newOrder">
         <div class="form-group">
-          <label for="name">Ваши контакты</label>
+          <label for="name">Ваше имя</label>
           <input type="text" id="name" name="name" required>
           <label for="phone">Ваш телефон</label>
           <input type="text" id="phone" name="phone" required>
         </div>
         <div class="form-group">
           <label for="newsText">Ваше сообщение:</label>
-          <textarea id="newsText" name="text" placeholder="Предпочтительный способ связи"></textarea>
+          <textarea id="newsText" name="text" placeholder="Предпочтительный способ связи (необязательно)"></textarea>
         </div>
         <button type="submit" id="btnsSubmit">Отправить</button>
       </form>
