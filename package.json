@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "gitadd": "git add . && git commit -m 'update' && git push"
+    "imagemin": "imagemin src/img dist/img -p",
+    "gitadd": "git add . && git commit -m 'update' && git push",
+    "min": "minify dist/index.html --out-file dist/index.html"
   },
   "devDependencies": {
     "sass": "^1.89.2",

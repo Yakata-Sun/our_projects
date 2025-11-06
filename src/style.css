@@ -3,7 +3,7 @@
   --background-main: #0b2c37;
   --text-color: #f0f0f0;
   --accent-color: #c78030;
-  --accent-gradient: linear-gradient(to right, var(--accent-color), #FEE97D);
+   --accent-gradient: linear-gradient(to right, var(--accent-color), #FEE97D);
   --accent-hover: #FEE97D;
   --card-background: #124559;
   --button-bg: #1a4e66;
@@ -15,6 +15,7 @@
   --border-radius-lg: 10px;
   --border-radius-xl: 12px;
   --border-radius-circle: 50%;
+
 }
 
 /* ====== 2. Базовые стили ====== */
@@ -86,9 +87,23 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
+.icons {
+  width: 36px;
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 /* ====== 3. Навигация ====== */
 .navbar {
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
   position: fixed;
   top: 0;
   left: 0;
@@ -96,8 +111,14 @@ img {
   margin: 0 auto;
   z-index: 1000;
   background: var(--background-main);
-  padding: 1rem 0;
+  padding: 1rem 3rem;
   box-shadow: 0 2px 8px var(--shadow-color);
+}
+.navbar-subscribe{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
 }
 
 .menu-bar {
@@ -105,7 +126,8 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 1.5rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
   cursor: pointer;
 }
 
@@ -131,17 +153,16 @@ img {
   height: 2px;
   margin-top: 4px;
    width: 0%;
-  background: linear-gradient(to right, #c78030, #fee97d);
-  -webkit-transition: .4s;
+  background:  var(--accent-gradient);
   transition: .4s;
 }
 
 .menu-bar_link:hover:after {
-  width: 60%;
+  width: 80%;
 }
 
 .menu-bar_link_active:after {
-  width: 60%;
+  width: 80%;
 }
 
 /* ====== 4. Секция "О нас" ====== */
@@ -273,6 +294,8 @@ img {
     color: var(--text-color);
     padding: 10px 20px;
     border: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     cursor: pointer;
     font-weight: bold;
@@ -283,36 +306,35 @@ img {
 
 
 /* ====== 7. Форма подписки ====== */
+.subscribe-section {
+  background-color: var(--card-background);
+    box-shadow: 0 10px 15px var(--shadow-color);
+}
 .subscribe-container {
   max-width: 600px;
   margin: auto;
   text-align: center;
 }
-
-.subscribe-form {
+.subscribe-container .qr{
+  width: 300px;
+  margin: 0 auto;
+}
+.subscribe-container .icons{
+  width: 36px;
+}
+.subscribe-container .linkT {
+  border: solid 1px var(--text-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color:  var(--background-main);;
+}
+.subscribe-telegram {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items:center;
   gap: 1rem;
-  align-items: center;
-}
-
-.subscribe-form input[type="email"] {
-  padding: 0.8rem 1.2rem;
-  width: 100%;
-  max-width: 400px;
-  border: none;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.btn-gradient {
-  background: var(--button-accent);
-  color: #07313f;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(to right, #ffe35e, var(--accent-color));
-  opacity: 0.9; /* Немного затемнение при наведении */
 }
 
 /* ====== 8. Каталог товаров/услуг ====== */
@@ -418,44 +440,44 @@ img {
 }
 
 /* Определения фоновых изображений */
-.plants { background-image: url("img/tovary/flower.png"); }
-.plants:hover { background-image: url("img/tovary/forz.png"); }
+.plants { background-image: url("./img/tovary/flower.png"); }
+.plants:hover { background-image: url("./img/tovary/forz.png"); }
 
-.lamps { background-image: url("img/tovary/panda.png"); }
-.lamps:hover { background-image: url("img/tovary/lustra.png"); }
+.lamps { background-image: url("./img/tovary/panda.png"); }
+.lamps:hover { background-image: url("./img/tovary/lustra.png"); }
 
-.jewerly { background-image: url("img/tovary/braslety.png"); }
-.jewerly:hover { background-image: url("img/tovary/ukrashen.png"); }
+.jewerly { background-image: url("./img/tovary/braslety.png"); }
+.jewerly:hover { background-image: url("./img/tovary/ukrashen.png"); }
 
-.forest { background-image: url("img/projects/forestpatch/skirt.jpg"); }
-.forest:hover { background-image: url("img/projects/forestpatch/bag.jpg"); }
+.forest { background-image: url("./img/projects/forestpatch/skirt.jpg"); }
+.forest:hover { background-image: url("./img/projects/forestpatch/bag.jpg"); }
 
-.keramic { background-image: url("img/tovary/keramika_tea.png"); }
-.keramic:hover { background-image: url("img/tovary/chashki.png"); }
+.keramic { background-image: url("./img/tovary/keramika_tea.png"); }
+.keramic:hover { background-image: url("./img/tovary/chashki.png"); }
 
-.honey { background-image: url("img/tovary/med_dik.png"); }
-.honey:hover { background-image: url("img/tovary/med_v_tarelke.png"); }
+.honey { background-image: url("./img/tovary/med_dik.png"); }
+.honey:hover { background-image: url("./img/tovary/med_v_tarelke.png"); }
 
-.lamps_wild { background-image: url("img/tovary/stounheng_chast.png"); }
-.lamps_wild:hover { background-image: url("img/tovary/nochnik.png"); }
+.lamps_wild { background-image: url("./img/tovary/stounheng_chast.png"); }
+.lamps_wild:hover { background-image: url("./img/tovary/nochnik.png"); }
 
-.gidrolats { background-image: url("img/tovary/gidrolat.png"); }
-.gidrolats:hover { background-image: url("img/tovary/gidrolaty.png"); }
+.gidrolats { background-image: url("./img/tovary/gidrolat.png"); }
+.gidrolats:hover { background-image: url("./img/tovary/gidrolaty.png"); }
 
-.cosmetics { background-image: url("img/tovary/mylo.png"); }
-.cosmetics:hover { background-image: url("img/tovary/shampun.png"); }
+.cosmetics { background-image: url("./img/tovary/mylo.png"); }
+.cosmetics:hover { background-image: url("./img/tovary/shampun.png"); }
 
-.dream { background-image: url("img/tovary/skazka.png"); }
-.dreamwoman { background-image: url("img/tovary/dreamwoman.png"); }
-.massage { background-image: url("img/tovary/massage.png"); }
-.repetitor { background-image: url("img/tovary/repetitor.png"); }
-.master_class { background-image: url("img/tovary/master_klass.png"); }
+.dream { background-image: url("./img/tovary/skazka.png"); }
+.dreamwoman { background-image: url("./img/tovary/dreamwoman.png"); }
+.massage { background-image: url("./img/tovary/massage.png"); }
+.repetitor { background-image: url("./img/tovary/repetitor.png"); }
+.master_class { background-image: url("./img/tovary/master_klass.png"); }
 .vargan {
-  background: url("img/projects/oly-vargan/catcher1.jpg") center center/cover no-repeat
+  background: url("./img/projects/oly-vargan/catcher1.jpg") center center/cover no-repeat
 }
 
 .vargan:hover {
-  background: url("img/projects/oly-vargan/vargan1.jpg") center center/cover no-repeat
+  background: url("./img/projects/oly-vargan/vargan1.jpg") center center/cover no-repeat
 }
 
 
@@ -524,7 +546,7 @@ img {
   list-style: none;
   padding: 1rem;
   margin: 0;
-  background-color: var(--background-main);
+  background-color: var(--card-background);
   box-shadow: 0 2px 8px var(--shadow-color);
 }
 
@@ -572,18 +594,15 @@ img {
 
 .slider-item.active {
   display: block;
-  animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  -webkit-animation: fadeIn 0.8s ease forwards;
+          animation: fadeIn 0.8s ease forwards;
 }
 
 .slider-item img {
   width: 100%;
   max-height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--border-radius-circle);
   box-shadow: 5px 10px 50px 10px var(--background-main);
   margin-bottom: 1rem;
@@ -674,12 +693,13 @@ img {
 /* ====== 10. Футер ====== */
 .footer-flex {
   display: flex;
-  background: var(--card-background);
+  background: var(--background-main);
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem 1rem;
   padding: 1rem;
   align-items:stretch;
+  box-shadow: var(--shadow-big);
 }
 
 .footer-flex h2 {
@@ -755,7 +775,13 @@ iframe {
   max-width: 500px;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: modalopen 0.4s;
+  -webkit-animation: modalopen 0.4s;
+          animation: modalopen 0.4s;
+}
+
+@-webkit-keyframes modalopen {
+  from {opacity: 0; transform: translateY(-60px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 @keyframes modalopen {
@@ -837,6 +863,8 @@ button[type="submit"]:hover {
     gap: 1rem;
   }
 .flexUl {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
   min-height: fit-content;
 }
   .footer-flex > div {
@@ -856,8 +884,19 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 992px) {
+  .navbar {
+    padding: 0.5rem 0;
+  flex-direction: column;}
+  .menu-bar {
+    flex-wrap: wrap;
+  }
   .menu-bar_link {
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+  .menu-bar_link:after {
+    height: 1px;
   }
 
   .about-section {
@@ -898,7 +937,8 @@ button[type="submit"]:hover {
   .slider-item img {
     min-height: 250px;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .prev {
@@ -931,10 +971,11 @@ button[type="submit"]:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   .navbar {
     padding: 0.5rem 0; /* Уменьшить паддинг */
     font-size: 18px; /* Уменьшить размер шрифта */
+      flex-direction: column;
   }
 
   .menu-bar_link:after {
@@ -942,7 +983,8 @@ button[type="submit"]:hover {
   }
 
   .menu-bar {
-    column-gap: 1rem; /* Меньше отступы между ссылками */
+    -moz-column-gap: 1rem;
+         column-gap: 1rem; /* Меньше отступы между ссылками */
   }
 
   .about-section {
@@ -1054,7 +1096,8 @@ button[type="submit"]:hover {
   }
 
   .menu-bar {
-    column-gap: 0.8rem; /* Еще меньше отступы */
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem; /* Еще меньше отступы */
     font-size: 16px; /* Еще меньше размер шрифта */
   }
 

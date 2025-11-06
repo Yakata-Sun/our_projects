@@ -98,3 +98,50 @@ console.log(target);
 
   bigImg('.galleryLite');
 });
+
+// subscribe
+document.getElementById('subscribeForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const emailInput = document.getElementById('email');
+
+  const email = emailInput.value.trim();
+
+  function openThanks() {
+    document.getElementById('thanks').style.display = 'block';
+  }
+  function closeThanks() {
+    document.getElementById('thanks').style.display = 'none';
+  }
+
+  if (!validateEmail(email)) {
+    alert('Пожалуйста, введите корректный email.');
+    return;
+  }
+
+  fetch('mailer/smart.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'email=' + encodeURIComponent(email)
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        console.log(data);
+        emailInput.value = '';
+        openThanks();
+        console.log('Спасибо за подписку!');
+        setTimeout(closeThanks, 3000);
+      }
+    })
+    .catch(error => {
+      console.error('Ошибка:', error);
+    });
+});
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}

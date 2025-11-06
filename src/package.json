@@ -10,6 +10,8 @@
     "gitadd": "git add . && git commit -m 'update' && git push"
   },
   "devDependencies": {
+    "gulp": "^5.0.1",
+    "imagemin-cli": "^3.0.0",
     "sass": "^1.89.2",
     "vite": "^7.1.4",
     "vite-plugin-html": "^3.2.2"
