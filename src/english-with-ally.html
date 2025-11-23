@@ -12,7 +12,7 @@
 <body>
   <header id="up">
   </header>
-  <nav class="navbar fade-in">
+  <nav class="navbar fadein">
     <ul class="menu-bar">
       <li class="menu-bar_list"><a href="index.html" class="menu-bar_link">Главная</a></li>
       <li class="menu-bar_list"><a href="index.html#products" class="menu-bar_link">Товары</a></li>
@@ -23,7 +23,7 @@
     </ul>
   </nav>
   <!-- About Section -->
-  <section class="about-section rout fade-in">
+  <section class="about-section rout fadein">
     <div class="container about-container">
       <div class="about-text">
         <div class="head_other">
@@ -44,7 +44,7 @@
       </div>
     </div>
   </section>
-  <main class="container-projects">
+  <main class="container-projects fadein">
     <article class="main_aside_menu">
       <input type="checkbox" id="toggle">
       <label for="toggle" class="hamburger">
@@ -73,6 +73,7 @@
           </li>
           <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
                 <li class="main_aside"><a href="alis-vargan.html" class="main_aside_link">Варганы и ловцы снов</a></li>
+                <li class="main_aside"><a href="chess.html" class="main_aside_link">Клуб шахмат и го</a></li>
           <li class="main_aside"><a href="krot.html" class="main_aside_link">Проект "Крот Новосвободный"</a></li>
         </ul>
       </div>
@@ -119,7 +120,7 @@
   </main>
   <!-- Footer -->
   <footer>
-    <div class="footer-flex">
+    <div class="footer-flex fadein">
       <div>
         <h2>Наши проекты</h2>
         <ul class="list_project flexUl">
@@ -140,6 +141,7 @@
                 "Тепло"</a></li>
           <li class="main_aside"><a href="massage.html" class="main_aside_link">Массаж для женщин</a></li>
                 <li class="main_aside"><a href="alis-vargan.html" class="main_aside_link">Варганы и ловцы снов</a></li>
+                <li class="main_aside"><a href="chess.html" class="main_aside_link">Клуб шахмат и го</a></li>
           <li class="main_aside"><a href="krot.html" class="main_aside_link">Площадка "Крот Новосвободный"</a></li>
         </ul>
       </div>
@@ -187,19 +189,7 @@
 
   <!-- Scroll to Top -->
   <a href="#up" class="pageUp"><b>↑</b></a>
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOnScroll = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
 
-    faders.forEach(el => appearOnScroll.observe(el));
-
-  </script>
 
 </body>
 
