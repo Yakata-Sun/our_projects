@@ -512,6 +512,7 @@ img {
 .slider-container {
   margin: 30px auto;
   display: flex;
+  align-items:flex-end;
   flex-wrap: nowrap;
   gap: 20px;
   max-width: calc(1400px - 2rem); /* Учитываем padding контейнера */
@@ -532,7 +533,7 @@ img {
   text-align: left;
   background-color: rgba(18, 69, 89, 0.5);
   border-radius: var(--border-radius-xl);
-  align-self: flex-start; /* Выравнивание по верху, если высоты разные */
+ /* Выравнивание по верху, если высоты разные */
 }
 
 .slider-thumbnails h2 {

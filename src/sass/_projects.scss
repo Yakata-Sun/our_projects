@@ -1,0 +1,142 @@
+.project {
+  flex: 1 1 75%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.project-keis {
+  margin-bottom: 3rem;
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-big);
+}
+
+.project-keis .cont {
+  justify-content: flex-start;
+  gap: 30px;
+}
+.project_promo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project_item {
+  margin-bottom: 3rem;
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+
+.project_item_description {
+  display: flex;
+  gap: 20px;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.project_item_description_image_project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.project_item_description_image_project .button {
+  box-shadow: inset 0 -4px 10px 4px var(--shadow-color);
+  border: none;
+}
+
+.project_item_description_image_project img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project_item_description_text {
+  align-self: center;
+  flex: 1;
+}
+
+.project_desc {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project_desc img {
+  display: block;
+  width: 45%;
+  min-width: 280px;
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+  align-self: center;
+  box-shadow: var(--shadow-big);
+  border-radius: 8px;
+}
+
+.project_desc_text {
+  align-self: center;
+  padding: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.geo {
+  align-self: flex-start;
+}
+
+.project_desc ul li {
+  list-style: none;
+}
+
+.project_desc ul li::before {
+  content: "•";
+  margin-right: 10px;
+  color: var(--accent-hover);
+}
+
+@media (max-width: 1400px) {
+    .project {
+    flex: 1;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+  .project_item {
+    padding: 1rem;
+  }
+
+  .project_item_description,
+  .project_desc {
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .project_item_description_image_project img,
+  .project_desc img {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+
+  .project_item_description_text,
+  .project_desc_text {
+    align-self: center;
+  }
+}
+@media (max-width: 768px) {
+ .project_item_description,
+  .project_desc {
+    flex-direction:column ;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}

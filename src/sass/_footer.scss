@@ -1,0 +1,79 @@
+.footer-flex {
+  display: flex;
+  background: var(--background-main);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 1rem;
+  padding: 1rem;
+  align-items:stretch;
+  box-shadow: var(--shadow-big);
+}
+
+.footer-flex h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.flexUl {
+  flex-grow: 2 0 fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  height: 400px;
+}
+
+
+.flexUl li a {
+  margin: 0 10px;
+}
+iframe {
+  margin: 0 auto; /* Помогает при выравнивании flexbox */
+  width: 100%;
+  height: 400px;
+  box-shadow: var(--shadow-big);
+}
+@media (max-width: 998px) {
+  .footer-flex {
+    justify-content: space-around;
+    gap: 1rem;
+  }
+.flexUl {
+  height: 100%;
+}
+  .footer-flex > div {
+    min-width: auto; /* Позволить колонкам быть меньше */
+    text-align: center; /* Центрировать текст в колонках */
+  }
+
+  .footer-flex ul {
+    text-align: left; /* Списки внутри колонок - по левому краю */
+    display: inline-block; /* Чтобы центрирование .footer-flex > div работало */
+  }
+
+  .footer-flex iframe {
+    align-self: center; /* Центрировать карту */
+    margin: 0 auto; /* Центрировать карту */
+  }
+}
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column; /* Вертикальное расположение на маленьких экранах */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-flex > div {
+    width: 100%;
+  }
+
+  .footer-flex ul {
+    display: block; /* Сброс inline-block для центрирования списка */
+    margin: 0 auto; /* Центрирование списка */
+  }
+
+
+  .footer-flex iframe {
+    width: 100%; /* Карта на всю ширину колонки */
+    max-width: 400px; /* Максимальная ширина */
+    height: 250px; /* Высота */
+  }
+}

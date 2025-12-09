@@ -1,0 +1,113 @@
+.about-section {
+  margin-top: calc(1.25rem + 29px);
+  padding: 4rem 0;
+  background-color: var(--card-background);
+  background-image: url('img/glav_head.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-text {
+  max-width: 800px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 2rem 3rem;
+  text-align: left;
+  background-color: rgba(18, 69, 89, 0.5);
+}
+
+.rout {
+  background-image: url('img/routes/bg.jpg');
+}
+
+.rout  h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.rout img{
+  max-width: 300px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cont {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 1rem;
+}
+
+.cont a {
+  display: block;
+}
+
+@media (max-width: 450px) {
+  .cont {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cont a {
+  display: block;
+}
+}
+
+
+/* Средние экраны (планшеты) */
+@media (max-width: 990px) {
+  .about-text {
+    padding: 2rem;
+  }
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .about-section {
+    scroll-margin-top: 80px; /* Чтобы при якорном переходе всё было видно */
+  }
+}
+@media (max-width: 768px) {
+.about-section {
+    padding: 3rem 0;
+    scroll-margin-top: 80px;
+  }
+
+  .about-text {
+    padding: 2rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+
+  .about-text h1 {
+    font-size: 1.8rem; /* Уменьшить заголовок в "О нас" */
+  }
+
+  .about-text {
+    padding: 1.5rem 1rem; /* Еще меньше паддинг */
+  }
+}

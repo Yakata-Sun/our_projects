@@ -1,0 +1,99 @@
+.button,
+.load-more,
+.subscribe-form button,
+.accent-btn,
+#ok {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none; /* Для ссылок-кнопок */
+  transition: background var(--transition-base), transform var(--transition-base), opacity var(--transition-base);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  font-family: inherit; /* Наследование шрифта от body */
+  font-size: 1rem; /* Единый размер шрифта */
+}
+
+.button,
+.btn,
+#ok {
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+.load-more{
+  background: var(--button-bg);
+  color: var(--text-color);
+}
+
+.load-more:hover,
+.button:hover,
+.btn:hover,
+#ok:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.load-more,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 1lh auto 0;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+   box-shadow: var(--shadow-big);
+    font-size: 1rem;
+}
+.load-more:hover {
+  background: var(--button-hover);
+}
+.accent-btn {
+  background-color: var(--button-accent);
+}
+.btn {
+    background-color: var(--button-accent);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+/* кнопки карточки маршрутов */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.btns a .load-more{
+  display: block;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+@media (max-width: 992px) {
+  .load-more {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+   .button,
+  .load-more,
+  .subscribe-form button,
+  #ok {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+}

@@ -1,0 +1,24 @@
+.pageUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: var(--accent-gradient);
+  color: #07313f;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background var(--transition-base), transform 0.2s ease;
+}
+
+.pageUp:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ffe35e, var(--accent-color));
+}
